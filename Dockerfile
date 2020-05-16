@@ -21,9 +21,7 @@ RUN echo "source activate react" > ~/.bashrc
 
 RUN conda install -n react scipy matplotlib shapely sympy psutil pillow
 
-COPY /react /react
-
-WORKDIR /react
+WORKDIR /app
 
 ENTRYPOINT  ["/bin/bash"]
 
