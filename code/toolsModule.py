@@ -2,17 +2,15 @@
 @author: cedelasen
 """
 
-import dcelInstance as dI
-import numpy as np
-import math as m
-
+import numpy
+import math
 import time 
-
-from random import randint
-from sympy.geometry import Line
-from scipy.spatial import ConvexHull
-from shapely.geometry import Point
-
+from sympy.geometry import (
+    Line
+)
+from shapely.geometry import ( 
+    Point
+)
 
 def sumatorio(vector):
     sum = 0
@@ -31,12 +29,12 @@ def generateRandomPoint(polygon):
     
     """
     
-    np.random.seed(int(time.time()))
+    numpy.random.seed(int(time.time()))
     minx, miny, maxx, maxy = polygon.bounds
-    pnt = Point([np.random.uniform(minx, maxx), np.random.uniform(miny, maxy)])
+    pnt = Point([numpy.random.uniform(minx, maxx), numpy.random.uniform(miny, maxy)])
 
     while not polygon.contains(pnt):
-        pnt = Point([np.random.uniform(minx, maxx), np.random.uniform(miny, maxy)])
+        pnt = Point([numpy.random.uniform(minx, maxx), numpy.random.uniform(miny, maxy)])
 
     return [pnt.x, pnt.y]
 
@@ -45,7 +43,7 @@ def mod2Points(p1,p2):
     
     """ returns vector's module operation """
     
-    return m.sqrt((p2[0]-p1[0])**2+(p2[1]-p1[1])**2)
+    return math.sqrt((p2[0]-p1[0])**2+(p2[1]-p1[1])**2)
 
 
 def disturbPoint(point, polygon):
@@ -60,12 +58,13 @@ def disturbPoint(point, polygon):
         if aux > d:
             d = aux
     while(not inside):
-        zeta = np.random.uniform(0,2*m.pi)      #generate random value 0-2pi
-        l = np.random.uniform(0, d)             #generate random value 0-d(the shortest distance between a point and a face's vertex)
-        nP = [point[0] + l*m.cos(zeta), point[1] + l*m.sin(zeta)]
+        zeta = numpy.random.uniform(0,2*math.pi)      #generate random value 0-2pi
+        l = numpy.random.uniform(0, d)             #generate random value 0-d(the shortest distance between a point and a face's vertex)
+        nP = [point[0] + l*math.cos(zeta), point[1] + l*math.sin(zeta)]
         inside = polygon.contains(Point(nP[0],nP[1]))
         
-    return  [point[0] + l*m.cos(zeta), point[1] + l*m.sin(zeta)]
+    return  [point[0] + l*math.cos(zeta), point[1] + l*math.sin(zeta)]
+
 
 def simmetricPoint(p, p1, p2):
     
@@ -77,6 +76,7 @@ def simmetricPoint(p, p1, p2):
     x = point[0][0]*2-p[0]
     y = point[0][1]*2-p[1]
     return [x,y]
+
 
 def indexByPoint(point, polygons):
     
@@ -99,7 +99,7 @@ def indexByPoint(point, polygons):
 
 def isValid(face, iniX, finX, iniY, finY):
     
-    """ Returns true if the face passed as parameter is not external """
+    """ returns true if the face passed as parameter is not external """
     
     p1 = [iniX, iniY]
     p2 = [iniX, finY]

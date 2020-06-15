@@ -1,37 +1,39 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
-#José María de la Sen Molina, @cedelasen
+"""
+@author: cedelasen
+"""
 
-import dcel as dc
-from scipy.spatial import Voronoi, voronoi_plot_2d
-import plottingModule as pM
-import finiteVor as fV
+import dcel
+import finiteVoronoi
+from scipy.spatial import (
+    Voronoi
+)
+from shapely.geometry import (
+    Polygon
+)
 
+def dcelInstanceByVerticesEdges(vL, eL, iniX, finX, iniY, finY, rangeX, rangeY):
 
-def dcelInstance(vL, eL, maxX, maxY, xRange, yRange):
-
-    fixX = xRange/maxX
-    fixY = yRange/maxY
+    maxX = rangeX/finX
+    maxY = rangeY/finY
 
     for v in vL:
-        v[0] = fixX*v[0]
-        v[1] = fixY*v[1]
+        v[0] = maxX*v[0]
+        v[1] = maxY*v[1]
 
-    d = dc.Dcel(vL, eL)
+    box = Polygon([[iniX, iniY], [iniX, rangeY], [rangeX, rangeY], [rangeX, iniY]])
+    d = dcel.Dcel(vL, eL, box)
     d.build_dcel()
 
     return d
 
 
-def generatorPointsToDcelInstance(gL, minX, maxX, minY, maxY, rangeX, rangeY):
+def dcelInstanceByGeneratorPoints(gL, iniX, finX, iniY, finY, rangeX, rangeY):
     
     vor = Voronoi(gL)
-    #voronoi_plot_2d(vor)           
-    #pM.plt.show()
     
-    polygons = fV.vorFiniteDelPolygonsList(vor, minX, maxX, minY, maxY)
+    polygons = finiteVoronoi.vorFiniteDelPolygonsList(vor, iniX, finX, iniY, finY)
     
-    file = open("generatorPointsToDcel.txt","w") 
+    file = open("tmp/generatorPointsToDcel.txt","w") 
     file.flush
     
     aux_vertices = []
@@ -77,4 +79,4 @@ def generatorPointsToDcelInstance(gL, minX, maxX, minY, maxY, rangeX, rangeY):
      
     file.close
 
-    return dcelInstance(vertices, edges, maxX, maxY, rangeX, rangeY)
+    return dcelInstance(vertices, edges, iniX, finX, iniY, finY, rangeX, rangeY)

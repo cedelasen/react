@@ -2,10 +2,11 @@
 @author: cedelasen
 """
 
-from scipy.spatial import Voronoi, ConvexHull, voronoi_plot_2d
-import numpy as np
+import numpy
 import matplotlib.pyplot as plt
-import finiteVor as fV
+from scipy.spatial import (
+    ConvexHull,
+)
 
 
 def plotPoints(points, color):
@@ -16,7 +17,7 @@ def plotPoints(points, color):
         plt.plot(p[0], p[1], color)
 
 
-def plotPoly(poly, color):#shapely.geometry.Polygon
+def plotPoly(poly, color): #shapely.geometry.Polygon
     
     """ plot poly with the color passed as parameter """
     
@@ -35,11 +36,10 @@ def plotConvexHull(vList, color):#ndarray
     
     """ vertices list -> Plot polygon (convex hull) with the color passed as parameter """
     
-    npArray = np.array(vList)
+    npArray = numpy.array(vList)
     hull = ConvexHull(npArray)
     for simplex in hull.simplices:
         plt.plot(npArray[simplex, 0], npArray[simplex, 1], color)
-    return
 
 
 def plotDcel(dcel, color):#dcel

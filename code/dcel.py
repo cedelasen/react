@@ -1,9 +1,9 @@
 #Copyright 2008, Angel Yanguas-Gil
 #edited
 
-import math as m
-import random as r
-import functools as ft
+import math
+import random
+import functools
 
 
 
@@ -21,7 +21,7 @@ class Vertex:
         self.hedgelist = []
 
     def sortincident(self):
-        self.hedgelist = sorted(self.hedgelist, key=ft.cmp_to_key(self.hsort), reverse=True)
+        self.hedgelist = sorted(self.hedgelist, key=functools.cmp_to_key(self.hsort), reverse=True)
 
     def hsort(self, h1, h2):
 
@@ -46,7 +46,7 @@ class Hedge:
         self.nexthedge = None
         self.angle = self.hangle(v2.x-v1.x, v2.y-v1.y)
         self.prevhedge = None
-        self.length = m.sqrt((v2.x-v1.x)**2 + (v2.y-v1.y)**2)
+        self.length = math.sqrt((v2.x-v1.x)**2 + (v2.y-v1.y)**2)
 
     def hangle(self,dx,dy):
 
@@ -54,11 +54,11 @@ class Hedge:
         of coordinates dx and dy
         """
 
-        l = m.sqrt(dx*dx + dy*dy)
+        l = math.sqrt(dx*dx + dy*dy)
         if dy > 0:
-            return m.acos(dx/l)
+            return math.acos(dx/l)
         else:
-            return 2*m.pi - m.acos(dx/l)
+            return 2*math.pi - math.acos(dx/l)
 
 
 class Face:
@@ -165,7 +165,7 @@ class Face:
     def randomEdgeNotExt(self):                                                 #returns a random edge of edge (no composing the bounding box)
         
         #f = dcel.faces[random.randint(0,n-1)]                                  #upper select random face
-        i = r.randint(0,self.numEdges()-1)                                      #random index in range (0-num of face's edges)
+        i = random.randint(0,self.numEdges()-1)                                      #random index in range (0-num of face's edges)
         w = self.getWedge(i)                                                    #index selected wedge
         
         while (w.twin.face.external):                                           #if not point (external) -> select the next not external edge
@@ -179,13 +179,14 @@ class Dcel:
 
     """ Implements a doubly-connected edge list - DCEL """
 
-    def __init__(self, vl=[], el=[]):
+    def __init__(self, vl=[], el=[], box=[]):
         self.vl = vl
         self.el = el
+        self.box = box    
         self.vertices = []
         self.hedges = []
         self.faces = []
-
+        
     def build_dcel(self):
 
         """ Creates the dcel from the list of vertices and edges """
