@@ -79,7 +79,7 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     
     plottingModule.plt.figure(4)
     plottingModule.plotDcel(dcel, 'k') #plot partition dcel instance
-    plottingModule.plt.title('Pre Simmulated Annealing' )
+    plottingModule.plt.title('Pre Simulated Annealing' )
     for f in dcel.faces:
         plottingModule.plotPoly(f.polygon, 'c')
     plottingModule.plotPoints(pSetPlantingSeedsFin, '-ok')    
@@ -104,32 +104,32 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     
     #Execution switch
     if (relationship == "classic"):
-        bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealing.simulatedAnnealing(dcel, r, tIni, tFin, l, n, minR, maxR)
+        bestPSet, bestSD, sDs, temps, its = simulatedAnnealing.simulatedAnnealing(dcel, r, tIni, tFin, l, n, minR, maxR)
     elif (relationship == "peers"):
         if (method == "and"):
-            bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealingPeers.simulatedAnnealingPeers_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "or"):
-            bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealingPeers.simulatedAnnealingPeers_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "numbers"):
-            bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealingPeers.simulatedAnnealingPeers_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         else:
             print("error_peers")
     elif (relationship == "groups"):
         if (method == "and"):
-            bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealingGroups.simulatedAnnealingGroups_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "or"):
-            bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealingGroups.simulatedAnnealingGroups_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "numbers"):
-            bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealingGroups.simulatedAnnealingGroups_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         else:
             print("error_groups")
     elif (relationship == "colours"):
         if (method == "and"):
-            bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealingColours.simulatedAnnealingColours_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
+            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
         elif (method == "or"):
-            bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealingColours.simulatedAnnealingColours_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
+            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
         elif (method == "numbers"):
-            bestPSet, bestSD, lastPSet, lastSD = simulatedAnnealingColours.simulatedAnnealingColours_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
+            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
         else:
             print("error_colours")
     else:
@@ -162,5 +162,5 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     
     plottingModule.plt.savefig(path + repr(bestSD) + '.jpg')
     
-    return bestPSet, bestSD
+    return bestPSet, bestSD, sDs, temps, its
     

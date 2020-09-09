@@ -26,6 +26,10 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
     polygons = finiteVoronoi.vorFinitePolygonsList(vor)                                                     
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
+    sDs = []
+    temps = []
+    its = []
+
     bestSD = sD
     bestSet = None #best set of points solution
      
@@ -130,6 +134,10 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
                 bestSD = sD #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
                     
+            sDs.append(bestSD)
+            temps.append(t)
+            its.append(it)
+
             oldSDs = [] #reboot
             newSDs = []
             res = []                                                                    
@@ -143,7 +151,7 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, pSet, sD
+    return bestSet, bestSD, sDs, temps, its
 
 
 
@@ -160,6 +168,10 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     polygons = finiteVoronoi.vorFinitePolygonsList(vor)                                                     
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
+    sDs = []
+    temps = []
+    its = []
+
     bestSD = sD
     bestSet = None #best set of points solution
      
@@ -258,6 +270,10 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
                 bestSD = sD  #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
                     
+            sDs.append(bestSD)
+            temps.append(t)
+            its.append(it)
+
             oldSDs = [] #reboot
             newSDs = []
             res = []                                                                    
@@ -271,7 +287,9 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, pSet, sD
+    return bestSet, bestSD, sDs, temps, its
+
+
 
 def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom):
          
@@ -286,6 +304,10 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
     polygons = finiteVoronoi.vorFinitePolygonsList(vor)                                                     
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
+    sDs = []
+    temps = []
+    its = []
+
     bestSD = sD
     bestSet = None #best set of points solution
      
@@ -408,6 +430,10 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
                 bestSD = sD #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
             
+            sDs.append(bestSD)
+            temps.append(t)
+            its.append(it)
+
             oldSDs = [] #reboot
             newSDs = []
             res = []                                                                    
@@ -421,4 +447,4 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, pSet, sD
+    return bestSet, bestSD, sDs, temps, its

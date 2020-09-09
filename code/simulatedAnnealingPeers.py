@@ -26,6 +26,10 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     polygons = finiteVoronoi.vorFinitePolygonsList(vor)                                                     
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
+    sDs = []
+    temps = []
+    its = []
+
     bestSD = sD
     bestSet = None #best set of points solution
      
@@ -84,6 +88,10 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
                 bestSD = sD #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
             
+            sDs.append(bestSD)
+            temps.append(t)
+            its.append(it)
+
         t = t*r
     file.close
     
@@ -91,7 +99,7 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, pSet, sD 
+    return bestSet, bestSD, sDs, temps, its
 
 
 
@@ -109,6 +117,10 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
     polygons = finiteVoronoi.vorFinitePolygonsList(vor)                                                     
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
+    sDs = []
+    temps = []
+    its = []
+
     bestSD = sD
     bestSet = None #best set of points solution
      
@@ -161,6 +173,10 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
                 bestSD = sD #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
             
+            sDs.append(bestSD)
+            temps.append(t)
+            its.append(it)
+
         t = t*r
     file.close
     
@@ -168,7 +184,7 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, pSet, sD
+    return bestSet, bestSD, sDs, temps, its
 
 
 
@@ -186,6 +202,10 @@ def simulatedAnnealingPeers_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, m
     polygons = finiteVoronoi.vorFinitePolygonsList(vor)                                                     
     sD = symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
+    sDs = []
+    temps = []
+    its = []
+
     bestSD = sD
     bestSet = None #best set of points solution
      
@@ -261,6 +281,10 @@ def simulatedAnnealingPeers_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, m
                 bestSD = sD #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
             
+            sDs.append(bestSD)
+            temps.append(t)
+            its.append(it)
+
         t = t*r
     file.close
     
@@ -268,4 +292,4 @@ def simulatedAnnealingPeers_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, m
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, pSet, sD 
+    return bestSet, bestSD, sDs, temps, its

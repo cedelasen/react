@@ -19,7 +19,7 @@ def process_args():
           "i": 1,
           "l": 0.06,
           "r": 0.095,
-          "maxExecs": 5,
+          "maxExecs": 1,
           "minR": 0,
           "maxR": 1,
           "relationship": "classic",
@@ -49,13 +49,13 @@ def execute(args):
       
       start = time.time()
             
-      bestPSet, bestSD = execution.execute(args.l, args.r, args.maxExecs, args.minR, args.maxR, args.relationship, args.method, args.colourDistribution, args.static, imagePath)
+      bestPSet, bestSD, sDs, temps, its = execution.execute(args.l, args.r, args.maxExecs, args.minR, args.maxR, args.relationship, args.method, args.colourDistribution, args.static, imagePath)
     
       end = time.time()
     
-        #save results
+      #save results
       with open(csvPath+'result.csv','a') as f:
-            fnames = ['relationship','method','colourDistribution','static','l','r','maxExecsPS','result','time','tempC0','tempC1','tempC2','tempC3','tempC4','tempC5']
+            fnames = ['relationship','method','colourDistribution','static','l','r','maxExecsPS','result','time']
             writer = csv.DictWriter(f, fieldnames=fnames)
             #writer.writeheader() #new file
             writer.writerow({'relationship' : args.relationship,
@@ -68,8 +68,14 @@ def execute(args):
                             'result': str(bestSD),
                             'time': str(end - start)
                             })
-          
-        #save points 
+      with open(csvPath+str(bestSD)+".csv",'a') as f:
+            fnames = ['temp','it','sd']
+            writer = csv.DictWriter(f, fieldnames=fnames)
+            writer.writeheader() 
+            for temp,it,sd in zip(temps,its,sDs):
+                writer.writerow({'temp': str(temp),'it': str(it),'sd': str(sd)})
+
+      #save points 
       with open(jsonPath+str(bestSD)+".json", "w") as write_file:
             json.dump(bestPSet, write_file, indent=4)
               
