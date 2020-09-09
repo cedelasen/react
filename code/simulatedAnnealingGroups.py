@@ -27,16 +27,16 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
     bestSD = sD
-    bestSet = None                                                              #best set of points solution
+    bestSet = None #best set of points solution
      
     cont = 0
-    t = tInicial                                                                #|negative|
-    r = ratio                                                                   # + math.log10(n)
+    t = tInicial #|negative|
+    r = ratio # + math.log10(n)
     
-    oldSDs = []                                                                 #aux
+    oldSDs = [] #aux
     newSDs = []
-    res = []                                                                    #cadena de ands
-    numMejoras = 0                                                              #contador de mejoras (number of improvements)
+    res = [] #cadena de ands
+    numMejoras = 0 #contador de mejoras (number of improvements)
 
    
     file.write("Number of generating points: " + str(len(pSet))+'\n')
@@ -48,18 +48,18 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
         cont = cont + 1
         it = (t/l)*n #L
         file.write("--- Total subiteraciones NR: " + str(it)+'\n')
-        it = int(round(it))+1                                                   #para los casos en los que obtengo 0
+        it = int(round(it))+1 #para los casos en los que obtengo 0
         file.write("--- Total subiteraciones R: " + str(it)+'\n')
         for i in range (0,it): 
             file.write("------ Subiteracion num: " + str(i)+'\n')
-            f = dcel.faces[random.randint(0,n-1)]                               #select random face
+            f = dcel.faces[random.randint(0,n-1)] #select random face
             numW = f.numEdges()
-            oldSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area)           #add symDif of selected point/face
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
+            oldSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area) #add symDif of selected point/face
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             file.write("------------ oldPoint: " + str(f.point)+'\n')
             file.write("-------------------- oldSD: " + str(oldSDs[0]) +'\n')
             
-            index = 1                                                           #empezamos a contar en uno ya que está incluida la DS del nodo central
+            index = 1 #empezamos a contar en uno ya que está incluida la DS del nodo central
             w = f.wedge
             for i in range (0, numW):
                 tF = w.twin.face
@@ -70,30 +70,30 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
                     index = index + 1
                 w = w.nexthedge
             
-            newPoint = toolsModule.disturbPoint(f.point, f.polygon)                      #calculate new point
+            newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------------ newPoint: " + str(newPoint)+'\n')
-            savePoint = f.point                                                 #save old point
-            f.point = newPoint                                                  #change old -> new
-            pSet = dcel.points()                                                #rescue all points with new point
-            vor = Voronoi(pSet)                                                 #recalculate voronoi
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
-            newSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area)           #add symDif of selected point/face
+            savePoint = f.point #save old point
+            f.point = newPoint #change old -> new
+            pSet = dcel.points() #rescue all points with new point
+            vor = Voronoi(pSet) #recalculate voronoi
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
+            newSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area) #add symDif of selected point/face
             
             index = 1
             w = f.wedge
             for j in range (0, numW):
                 tF = w.twin.face
                 if(not tF.external):
-                    newSDs.append(symmetricDifference.localSymDif(tF, polygons, box)/box.area)  #add symDif of selected point/face
+                    newSDs.append(symmetricDifference.localSymDif(tF, polygons, box)/box.area) #add symDif of selected point/face
                     file.write("------------ neighbour point " + str(j) + " : " + str(tF.point)+'\n')
                     file.write("-------------------- simSD: " + str(oldSDs[index]) +'\n')
                     index = index + 1
                 w = w.nexthedge
     
-            size = len(oldSDs)                                                  #no necesariamente será num Aristas + 1 ya que no se trabaja con las caras externas
+            size = len(oldSDs) #no necesariamente será num Aristas + 1 ya que no se trabaja con las caras externas
     
             file.write("------------------------- COMPARATOR\n'")
-            for k in range (0, size):                                           #observamos resultados
+            for k in range (0, size): #observamos resultados
                 old = oldSDs[k]
                 new = newSDs[k]
                 b = new<=old
@@ -109,12 +109,12 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
             file.write("------------------------------------- numero de implicados: "+ str(size)+'\n')
             file.write("------------------------------------- numero de mejoras: " + str(numMejoras)+'\n')
 
-            if size == numMejoras:     #and                                           
+            if size == numMejoras: #and                                           
                 file.write("----------------------------------------- ACEPTADO "+'\n')
             else:
                 file.write("----------------------------------------- DENEGADO "+'\n')
                 file.write("-------------------------------------------- Segunda oportunidad: "+'\n')
-                delta = toolsModule.sumatorio(newSDs)-toolsModule.sumatorio(oldSDs)                                     #decide número mejoras
+                delta = toolsModule.sumatorio(newSDs)-toolsModule.sumatorio(oldSDs) #decide número mejoras
                 prob = math.e**(-delta/t)
                 rand = numpy.random.uniform(minRandom,maxRandom)
                 if(rand > prob):
@@ -126,11 +126,11 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
                     vor = Voronoi(pSet)
             
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
-            if (sD < bestSD):                                                   #if best solution
-                bestSD = sD                                                     #best symmetric difference <- actual symmetric difference
-                bestSet = pSet                                                  #best set of generator points <- actual set of generator points
+            if (sD < bestSD): #if best solution
+                bestSD = sD #best symmetric difference <- actual symmetric difference
+                bestSet = pSet #best set of generator points <- actual set of generator points
                     
-            oldSDs = []                                                         #reboot
+            oldSDs = [] #reboot
             newSDs = []
             res = []                                                                    
             numMejoras = 0
@@ -161,16 +161,16 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
     bestSD = sD
-    bestSet = None                                                              #best set of points solution
+    bestSet = None #best set of points solution
      
     cont = 0
-    t = tInicial                                                                #|negative|
-    r = ratio                                                                   # + math.log10(n)
+    t = tInicial #|negative|
+    r = ratio # + math.log10(n)
     
-    oldSDs = []                                                                 #aux
+    oldSDs = [] #aux
     newSDs = []
-    res = []                                                                    #cadena de ands
-    numMejoras = 0                                                              #contador de mejoras (number of improvements)
+    res = [] #cadena de ands
+    numMejoras = 0 #contador de mejoras (number of improvements)
 
     
     file.write("Number of generating points: " + str(len(pSet))+'\n')
@@ -182,37 +182,37 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
         cont = cont + 1
         it = (t/l)*n #L
         file.write("--- Total subiteraciones NR: " + str(it)+'\n')
-        it = int(round(it))+1                                                   #para los casos en los que obtengo 0
+        it = int(round(it))+1 #para los casos en los que obtengo 0
         file.write("--- Total subiteraciones R: " + str(it)+'\n')
         for i in range (0,it): 
             #print(i)
             file.write("------ Subiteracion num: " + str(i)+'\n')
-            f = dcel.faces[random.randint(0,n-1)]                               #select random face
+            f = dcel.faces[random.randint(0,n-1)] #select random face
             numW = f.numEdges()
-            oldSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area)           #add symDif of selected point/face
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
+            oldSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area) #add symDif of selected point/face
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             file.write("------------ oldPoint: " + str(f.point)+'\n')
             file.write("-------------------- oldSD: " + str(oldSDs[0]) +'\n')
             
-            index = 1                                                           #empezamos a contar en uno ya que está incluida la DS del nodo central
+            index = 1 #empezamos a contar en uno ya que está incluida la DS del nodo central
             w = f.wedge
             for i in range (0, numW):
                 tF = w.twin.face
                 if(not tF.external):
-                    oldSDs.append(symmetricDifference.localSymDif(tF, polygons, box)/box.area)               #add symDif of selected point/face
+                    oldSDs.append(symmetricDifference.localSymDif(tF, polygons, box)/box.area) #add symDif of selected point/face
                     file.write("------------ neighbour point " + str(i) + " : " + str(tF.point)+'\n')
                     file.write("-------------------- oldSD: " + str(oldSDs[index]) +'\n')
                     index = index + 1
                 w = w.nexthedge
             
-            newPoint = toolsModule.disturbPoint(f.point, f.polygon)                      #calculate new point
+            newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------------ newPoint: " + str(newPoint)+'\n')
-            savePoint = f.point                                                 #save old point
-            f.point = newPoint                                                  #change old -> new
-            pSet = dcel.points()                                                #rescue all points with new point
-            vor = Voronoi(pSet)                                                 #recalculate voronoi
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
-            newSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area)           #add symDif of selected point/face
+            savePoint = f.point #save old point
+            f.point = newPoint #change old -> new
+            pSet = dcel.points() #rescue all points with new point
+            vor = Voronoi(pSet) #recalculate voronoi
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
+            newSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area) #add symDif of selected point/face
             
             index = 1
             w = f.wedge
@@ -225,11 +225,11 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
                     index = index + 1
                 w = w.nexthedge
     
-            size = len(oldSDs)                                                  #no necesariamente será num Aristas + 1 ya que no se trabaja con las caras externas
+            size = len(oldSDs) #no necesariamente será num Aristas + 1 ya que no se trabaja con las caras externas
 
     
             file.write("------------------------- COMPARATOR'\n'")
-            for k in range (0, size):                                           #observamos resultados
+            for k in range (0, size): #observamos resultados
                 old = oldSDs[k]
                 new = newSDs[k]
                 b = new<=old
@@ -254,11 +254,11 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
                 vor = Voronoi(pSet)
 
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
-            if (sD < bestSD):                                                   #if best solution
-                bestSD = sD                                                     #best symmetric difference <- actual symmetric difference
-                bestSet = pSet                                                  #best set of generator points <- actual set of generator points
+            if (sD < bestSD):  #if best solution
+                bestSD = sD  #best symmetric difference <- actual symmetric difference
+                bestSet = pSet #best set of generator points <- actual set of generator points
                     
-            oldSDs = []                                                         #reboot
+            oldSDs = [] #reboot
             newSDs = []
             res = []                                                                    
             numMejoras = 0 
@@ -287,16 +287,16 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
     bestSD = sD
-    bestSet = None                                                              #best set of points solution
+    bestSet = None #best set of points solution
      
     cont = 0
-    t = tInicial                                                                #|negative|
-    r = ratio                                                                   # + math.log10(n)
+    t = tInicial #|negative|
+    r = ratio # + math.log10(n)
     
-    oldSDs = []                                                                 #aux
+    oldSDs = [] #aux
     newSDs = []
-    res = []                                                                    #cadena de ands
-    numMejoras = 0                                                              #contador de mejoras (number of improvements)
+    res = [] #cadena de ands
+    numMejoras = 0 #contador de mejoras (number of improvements)
 
     
     file.write("Number of generating points: " + str(len(pSet))+'\n')
@@ -308,52 +308,52 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
         cont = cont + 1
         it = (t/l)*n #L
         file.write("--- Total subiteraciones NR: " + str(it)+'\n')
-        it = int(round(it))+1                                                   #para los casos en los que obtengo 0
+        it = int(round(it))+1 #para los casos en los que obtengo 0
         file.write("--- Total subiteraciones R: " + str(it)+'\n')
         for i in range (0,it): 
             file.write("------ Subiteracion num: " + str(i)+'\n')
-            f = dcel.faces[random.randint(0,n-1)]                               #select random face
+            f = dcel.faces[random.randint(0,n-1)] #select random face
             numW = f.numEdges()
-            oldSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area)           #add symDif of selected point/face
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
+            oldSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area) #add symDif of selected point/face
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             file.write("------------ oldPoint: " + str(f.point)+'\n')
             file.write("-------------------- oldSD: " + str(oldSDs[0]) +'\n')
             
-            index = 1                                                           #empezamos a contar en uno ya que está incluida la DS del nodo central
+            index = 1 #empezamos a contar en uno ya que está incluida la DS del nodo central
             w = f.wedge
             for i in range (0, numW):
                 tF = w.twin.face
                 if(not tF.external):
-                    oldSDs.append(symmetricDifference.localSymDif(tF, polygons, box)/box.area)  #add symDif of selected point/face
+                    oldSDs.append(symmetricDifference.localSymDif(tF, polygons, box)/box.area) #add symDif of selected point/face
                     file.write("------------ neighbour point " + str(i) + " : " + str(tF.point)+'\n')
                     file.write("-------------------- oldSD: " + str(oldSDs[index]) +'\n')
                     index = index + 1
                 w = w.nexthedge
             
-            newPoint = toolsModule.disturbPoint(f.point, f.polygon)                      #calculate new point
+            newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------------ newPoint: " + str(newPoint)+'\n')
-            savePoint = f.point                                                 #save old point
-            f.point = newPoint                                                  #change old -> new
-            pSet = dcel.points()                                                #rescue all points with new point
-            vor = Voronoi(pSet)                                                 #recalculate voronoi
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
-            newSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area)           #add symDif of selected point/face
+            savePoint = f.point #save old point
+            f.point = newPoint #change old -> new
+            pSet = dcel.points() #rescue all points with new point
+            vor = Voronoi(pSet) #recalculate voronoi
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
+            newSDs.append(symmetricDifference.localSymDif(f, polygons, box)/box.area) #add symDif of selected point/face
             
             index = 1
             w = f.wedge
             for j in range (0, numW):
                 tF = w.twin.face
                 if(not tF.external):
-                    newSDs.append(symmetricDifference.localSymDif(tF, polygons, box)/box.area)  #add symDif of selected point/face
+                    newSDs.append(symmetricDifference.localSymDif(tF, polygons, box)/box.area) #add symDif of selected point/face
                     file.write("------------ neighbour point " + str(j) + " : " + str(tF.point)+'\n')
                     file.write("-------------------- simSD: " + str(oldSDs[index]) +'\n')
                     index = index + 1
                 w = w.nexthedge
     
-            size = len(oldSDs)                                                  #no necesariamente será num Aristas + 1 ya que no se trabaja con las caras externas
+            size = len(oldSDs) #no necesariamente será num Aristas + 1 ya que no se trabaja con las caras externas
     
             file.write("------------------------- COMPARATOR'\n'")
-            for k in range (0, size):                                           #observamos resultados
+            for k in range (0, size): #observamos resultados
                 old = oldSDs[k]
                 new = newSDs[k]
                 b = new<=old
@@ -378,7 +378,7 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
                 else:
                     file.write("----------------------------------------- DENEGADO "+'\n')
                     file.write("-------------------------------------------- Segunda oportunidad: "+'\n')
-                    delta = toolsModule.sumatorio(newSDs)-toolsModule.sumatorio(oldSDs)                                     #decide número mejoras
+                    delta = toolsModule.sumatorio(newSDs)-toolsModule.sumatorio(oldSDs) #decide número mejoras
                     prob = math.e**(-delta/t)
                     rand = numpy.random.uniform(minRandom,maxRandom)
                     if(rand > prob):
@@ -391,7 +391,7 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
             else:
                 file.write("----------------------------------------- DENEGADO "+'\n')
                 file.write("-------------------------------------------- Segunda oportunidad: "+'\n')
-                delta = toolsModule.sumatorio(newSDs)-toolsModule.sumatorio(oldSDs)                                     #decide número mejoras
+                delta = toolsModule.sumatorio(newSDs)-toolsModule.sumatorio(oldSDs) #decide número mejoras
                 prob = math.e**(-delta/t)
                 rand = numpy.random.uniform(minRandom,maxRandom)
                 if(rand > prob):
@@ -404,11 +404,11 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
 
 
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
-            if (sD < bestSD):                                               #if best solution
-                bestSD = sD                                                 #best symmetric difference <- actual symmetric difference
-                bestSet = pSet                                              #best set of generator points <- actual set of generator points
+            if (sD < bestSD):  #if best solution
+                bestSD = sD #best symmetric difference <- actual symmetric difference
+                bestSet = pSet #best set of generator points <- actual set of generator points
             
-            oldSDs = []                                                         #reboot
+            oldSDs = [] #reboot
             newSDs = []
             res = []                                                                    
             numMejoras = 0
