@@ -24,11 +24,10 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
  
     
     #ORIGINAL PARTITION to DCEL INSTANCE
-    dcel = dcelInstance.dcelInstanceByVerticesEdges(data.vL, data.eL, data.iniX_palop, data.finX_palop, data.iniY_palop, data.finY_palop, data.finX_palop, data.finY_palop) #input partition dcel instance
-    #dcel = dcelInstance.dcelInstanceByGeneratorPoints(data.gL, iniX, finX, iniY, finY, finX, finY)
+    dcel = dcelInstance.dcelInstanceByVerticesEdges(data.vL, data.eL, data.iniX_palop, data.finX_palop, data.iniY_palop, data.finY_palop, data.finX_palop, data.finY_palop)
 
     #REMOVE EXTERNAL FACES
-    for f in dcel.faces:                                                            #delete external face from list of dcel's faces
+    for f in dcel.faces: #delete external face from list of dcel's faces
         if f.external:
             dcel.faces.remove(f)
     
@@ -37,12 +36,12 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     
     #PARTITION CHECK
     plottingModule.plt.figure(1)
-    plottingModule.plotDcel(dcel, 'k')                                                          #plot partition dcel instance
+    plottingModule.plotDcel(dcel, 'k') #plot partition dcel instance
     plottingModule.plt.title('DCEL partition check')
 
     ##PLANTING SEEDS
     plottingModule.plt.figure(2)
-    plottingModule.plotDcel(dcel, 'k')                                                          #plot partition dcel instance
+    plottingModule.plotDcel(dcel, 'k') #plot partition dcel instance
     plottingModule.plt.title('Initial planting seeds')
 
     #planting seeds ini
@@ -53,7 +52,7 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     
     #PLANTING SEEDS cont.
     plottingModule.plt.figure(3)
-    plottingModule.plotDcel(dcel, 'k')                                                          #plot partition dcel instance
+    plottingModule.plotDcel(dcel, 'k') #plot partition dcel instance
     plottingModule.plt.title('Planting seeds continuation ' + repr(maxExecs) + ' (it.)' )
     
     #planting seeds fin
@@ -63,14 +62,14 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     
     
     #initial voronoi diagram
-    vor = Voronoi(pSetPlantingSeedsFin)                                                        #calculate voronoi
+    vor = Voronoi(pSetPlantingSeedsFin) #calculate voronoi
     
     ##polygons
-    polygons = finiteVoronoi.vorFinitePolygonsList(vor)                                        #vor to finiteVoronoi (polygons)
+    polygons = finiteVoronoi.vorFinitePolygonsList(vor) #vor to finiteVoronoi(polygons)
     
     
     #initial symmetric difference
-    sd = symmetricDifference.symDif(dcel.faces, polygons, dcel.box)                                            #initial energy (global)
+    sd = symmetricDifference.symDif(dcel.faces, polygons, dcel.box) #initial energy (global)
     
     #T inicial
     tIni = math.fabs(1/math.log10(sd))
@@ -79,7 +78,7 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     tFin = tIni/(100*math.log10(n))
     
     plottingModule.plt.figure(4)
-    plottingModule.plotDcel(dcel, 'k')                                                          #plot partition dcel instance
+    plottingModule.plotDcel(dcel, 'k') #plot partition dcel instance
     plottingModule.plt.title('Pre Simmulated Annealing' )
     for f in dcel.faces:
         plottingModule.plotPoly(f.polygon, 'c')
@@ -97,7 +96,7 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
         plantingSeeds.distroPoints(dcel, coloursDistribution)
         #Checking colours.
         plottingModule.plt.figure(5)
-        plottingModule.plotDcel(dcel, 'k')                                                          #plot partition dcel instance
+        plottingModule.plotDcel(dcel, 'k') #plot partition dcel instance
         plottingModule.plt.title('Checking colours' )
         plottingModule.plotPoints(pSetPlantingSeedsFin, '-ob')
         for f in dcel.faces:
@@ -161,8 +160,6 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     plottingModule.plotPolys(polygonsPBest,'g')
     plottingModule.plotPoints(bestPSet,'-ob')
     
-    
-        
     plottingModule.plt.savefig(path + repr(bestSD) + '.jpg')
     
     return bestPSet, bestSD
