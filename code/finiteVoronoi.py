@@ -70,8 +70,8 @@ def vorFinitePolygons(vor, radius=None):
 
             # Compute the missing endpoint of an infinite ridge
             t = vor.points[p2] - vor.points[p1] #tangent
-            t /= numpy.linalg.norm(t)              #matriz de Frobenius
-            n = numpy.array([-t[1], t[0]])         #normal
+            t /= numpy.linalg.norm(t) #matriz de Frobenius
+            n = numpy.array([-t[1], t[0]]) #normal
 
             midpoint = vor.points[[p1, p2]].mean(axis=0)
             direction = numpy.sign(numpy.dot(midpoint - center, n)) * n
