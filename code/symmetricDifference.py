@@ -1,18 +1,16 @@
 """
 @author: cedelasen
 """
-
 from shapely.geometry import (
     Polygon,
     Point
 )
 
-
 def localSymDif(face, polygons, box):
     
     """ returns the symmetric difference between a dcel's face and his correspondent polygon of the list of voronoi's polygon (index by shared point) """
     
-    p = face.point       #get the point to 'index' in polygons list
+    p = face.point #get the point to 'index' in polygons list
     found = False
     cont = 0
     while not found:
@@ -28,8 +26,7 @@ def localSymDif(face, polygons, box):
     return dS
 
 
-
-def symDif(faces, polygons, box):     #dcel and polygons list as parameter
+def symDif(faces, polygons, box): #faces and polygons list as parameter
     
     """ returns the global symmetric difference between the dcel and the list of voronoi's polygons """
     
