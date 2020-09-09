@@ -1,14 +1,13 @@
-#Copyright 2008, Angel Yanguas-Gil
-#edited
-
+"""
+@author: Angel Yanguas Gil
+@edited: cedelasen
+"""
 import math
 import random
 import functools
 
 
-
 class DcelError(Exception): pass
-
 
 
 class Vertex:
@@ -40,12 +39,12 @@ class Hedge:
     """Minimal implementation of a half-edge of a 2D dcel"""
 
     def __init__(self,v1,v2):
-        self.origin = v2                                                        #the origin is defined as the vertex it points to
+        self.origin = v2 #the origin is defined as the vertex it points to
         self.twin = None
         self.face = None
         self.nexthedge = None
-        self.angle = self.hangle(v2.x-v1.x, v2.y-v1.y)
         self.prevhedge = None
+        self.angle = self.hangle(v2.x-v1.x, v2.y-v1.y)
         self.length = math.sqrt((v2.x-v1.x)**2 + (v2.y-v1.y)**2)
 
     def hangle(self,dx,dy):
@@ -66,14 +65,14 @@ class Face:
     """Implementation of a face of a 2D dcel"""
 
     def __init__(self):
-        self.wedge = None                                                       #incident edge
+        self.wedge = None #incident edge
         self.external = None
         self.polygon = None
         self.point = None
         self.color = None
         self.check = None
 
-    def area(self):                                                             #Gauss's area formula - shoelace formula
+    def area(self): #Gauss's area formula - shoelace formula
         h = self.wedge
         a = 0
         while(not h.nexthedge is self.wedge):
@@ -86,7 +85,7 @@ class Face:
         p1 = h.origin
         p2 = self.wedge.origin
 
-        #last it. and symmetric difference
+        #last it.
         a = (a + p1.x*p2.y - p2.x*p1.y)/2
 
         return a
@@ -131,7 +130,7 @@ class Face:
             cont+= 1
         return cont
 
-    def isInside(self, p):                                                      #determines if a point is inside a face
+    def isInside(self, p): #determines if a point is inside a face
          
         h = self.wedge
         if self.leftOn(h, p):
@@ -162,16 +161,16 @@ class Face:
         return (pb.x - pa.x)*(pc[1] - pa.y) - (pc[0] - pa.x)*(pb.y - pa.y)
 
 
-    def randomEdgeNotExt(self):                                                 #returns a random edge of edge (no composing the bounding box)
+    def randomEdgeNotExt(self): #returns a random edge of edge (no composing the bounding box)
         
-        #f = dcel.faces[random.randint(0,n-1)]                                  #upper select random face
-        i = random.randint(0,self.numEdges()-1)                                      #random index in range (0-num of face's edges)
-        w = self.getWedge(i)                                                    #index selected wedge
+        #f = dcel.faces[random.randint(0,n-1)] #upper select random face
+        i = random.randint(0,self.numEdges()-1) #random index in range (0-num of face's edges)
+        w = self.getWedge(i) #index selected wedge
         
-        while (w.twin.face.external):                                           #if not point (external) -> select the next not external edge
-            w = w.nexthedge                                                     #best case: interior face
-                                                                                #mid case: exterior face with only one external edge
-                                                                                #worst case: exterior face with two external edges
+        while (w.twin.face.external): #if not point (external) -> select the next not external edge
+            w = w.nexthedge #best case: interior face
+                            #mid case: exterior face with only one external edge
+                            #worst case: exterior face with two external edges
         return w
 
 
