@@ -22,11 +22,8 @@ def sumatorio(vector):
 def generateRandomPoint(polygon):
     
     """ returns a random point inside a polygon
-    
     source : https://gis.stackexchange.com/questions/207731/how-to-generate-random-coordinates-in-a-multipolygon-in-python
-    
     state : modified
-    
     """
     
     numpy.random.seed(int(time.time()))
@@ -58,8 +55,8 @@ def disturbPoint(point, polygon):
         if aux > d:
             d = aux
     while(not inside):
-        zeta = numpy.random.uniform(0,2*math.pi)      #generate random value 0-2pi
-        l = numpy.random.uniform(0, d)             #generate random value 0-d(the shortest distance between a point and a face's vertex)
+        zeta = numpy.random.uniform(0,2*math.pi) #generate random value 0-2pi
+        l = numpy.random.uniform(0, d) #generate random value 0-d(the shortest distance between a point and a face's vertex)
         nP = [point[0] + l*math.cos(zeta), point[1] + l*math.sin(zeta)]
         inside = polygon.contains(Point(nP[0],nP[1]))
         
