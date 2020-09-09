@@ -1,2 +1,4 @@
 # ignore all txts
 code/tmp/*.txt
+code/__pycache__/*
+code/.ipynb_checkpoints/*
