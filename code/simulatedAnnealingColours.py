@@ -28,11 +28,11 @@ def simulatedAnnealingColours_AndMethod(dcel, ratio, tInicial, tFinal, l, n, min
     sD = symmetricDifference.symDif(dcel.faces, polygons, box)                                                               
     
     bestSD = sD
-    bestSet = pSet                                                              #best set of points solution
+    bestSet = pSet #best set of points solution
      
     cont = 0
-    t = tInicial                                                                #|negative|
-    r = ratio                                                                   # + m.log10(n)
+    t = tInicial #|negative|
+    r = ratio # + m.log10(n)
     
     plantingSeeds.distroPoints(dcel, mode)
     
@@ -45,22 +45,22 @@ def simulatedAnnealingColours_AndMethod(dcel, ratio, tInicial, tFinal, l, n, min
         cont = cont + 1
         it = (t/l)*n #L
         file.write("--- Total subiteraciones NR: " + str(it)+'\n')
-        it = int(round(it))+1                                                   #para los casos en los que obtengo 0
+        it = int(round(it))+1 #para los casos en los que obtengo 0
         file.write("--- Total subiteraciones R: " + str(it)+'\n')
         
         for i in range (0,it):
-            f = dcel.faces[random.randint(0,n-1)]                               #select random face
+            f = dcel.faces[random.randint(0,n-1)] #select random face
             color = f.color
-            oldPolygons = finiteVoronoi.vorFinitePolygonsList(vor)                         #not delimited
+            oldPolygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             oldSD = symmetricDifference.symDifColours(dcel.faces, oldPolygons, color, box)
-            newPoint = toolsModule.disturbPoint(f.point, f.polygon)           #calculate new point
+            newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------ Subiteracion num: " + str(i)+'\n')
             file.write("------------ newPoint: " + str(newPoint)+'\n')
-            savePoint = f.point                                                 #save old point
-            f.point = newPoint                                                  #change old -> new
-            pSet = dcel.points()                                                #rescue all points with new point
-            vor = Voronoi(pSet)                                                 #recalculate voronoi
-            newPolygons = finiteVoronoi.vorFinitePolygonsList(vor)                         #not delimited
+            savePoint = f.point #save old point
+            f.point = newPoint #change old -> new
+            pSet = dcel.points() #rescue all points with new point
+            vor = Voronoi(pSet) #recalculate voronoi
+            newPolygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             newSD = symmetricDifference.symDifColours(dcel.faces, newPolygons, color, box)
             
             comp = symmetricDifference.andChainColours(dcel.faces, oldPolygons, newPolygons, color, box)
@@ -80,9 +80,9 @@ def simulatedAnnealingColours_AndMethod(dcel, ratio, tInicial, tFinal, l, n, min
                     vor = Voronoi(pSet)
                     
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
-            if (sD < bestSD):                                               #if best solution
-                bestSD = sD                                                 #best symmetric difference <- actual symmetric difference
-                bestSet = pSet                                              #best set of generator points <- actual set of generator points
+            if (sD < bestSD): #if best solution
+                bestSD = sD #best symmetric difference <- actual symmetric difference
+                bestSet = pSet #best set of generator points <- actual set of generator points
             
             if (not static):
                 plantingSeeds.distroPoints(dcel, mode)
@@ -114,11 +114,11 @@ def simulatedAnnealingColours_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minR
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
     bestSD = sD
-    bestSet = pSet                                                              #best set of points solution
+    bestSet = pSet #best set of points solution
      
     cont = 0
-    t = tInicial                                                                #|negative|
-    r = ratio                                                                   # + m.log10(n)
+    t = tInicial #|negative|
+    r = ratio # + m.log10(n)
     
     plantingSeeds.distroPoints(dcel, mode)
     
@@ -131,21 +131,21 @@ def simulatedAnnealingColours_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minR
         cont = cont + 1
         it = (t/l)*n #L
         file.write("--- Total subiteraciones NR: " + str(it)+'\n')
-        it = int(round(it))+1                                                   #para los casos en los que obtengo 0
+        it = int(round(it))+1 #para los casos en los que obtengo 0
         file.write("--- Total subiteraciones R: " + str(it)+'\n')
         
         for i in range (0,it):
-            f = dcel.faces[random.randint(0,n-1)]                               #select random face
+            f = dcel.faces[random.randint(0,n-1)] #select random face
             color = f.color
-            oldPolygons = finiteVoronoi.vorFinitePolygonsList(vor)                         #not delimited
-            newPoint = toolsModule.disturbPoint(f.point, f.polygon)           #calculate new point
+            oldPolygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
+            newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------ Subiteracion num: " + str(i)+'\n')
             file.write("------------ newPoint: " + str(newPoint)+'\n')
-            savePoint = f.point                                                 #save old point
-            f.point = newPoint                                                  #change old -> new
-            pSet = dcel.points()                                                #rescue all points with new point
-            vor = Voronoi(pSet)                                                 #recalculate voronoi
-            newPolygons = finiteVoronoi.vorFinitePolygonsList(vor)                         #not delimited
+            savePoint = f.point #save old point
+            f.point = newPoint #change old -> new
+            pSet = dcel.points() #rescue all points with new point
+            vor = Voronoi(pSet) #recalculate voronoi
+            newPolygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             
             comp = symmetricDifference.orChainColours(dcel.faces, oldPolygons, newPolygons, color, box)
             
@@ -158,9 +158,9 @@ def simulatedAnnealingColours_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minR
                 vor = Voronoi(pSet)
                 
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
-            if (sD < bestSD):                                                   #if best solution
-                bestSD = sD                                                     #best symmetric difference <- actual symmetric difference
-                bestSet = pSet                                                  #best set of generator points <- actual set of generator points
+            if (sD < bestSD): #if best solution
+                bestSD = sD #best symmetric difference <- actual symmetric difference
+                bestSet = pSet #best set of generator points <- actual set of generator points
             
             if (not static):
                 plantingSeeds.distroPoints(dcel, mode)
@@ -192,11 +192,11 @@ def simulatedAnnealingColours_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n,
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
     bestSD = sD
-    bestSet = pSet                                                              #best set of points solution
+    bestSet = pSet #best set of points solution
      
     cont = 0
-    t = tInicial                                                                #|negative|
-    r = ratio                                                                   # + m.log10(n)
+    t = tInicial #|negative|
+    r = ratio # + m.log10(n)
  
     plantingSeeds.distroPoints(dcel, mode)
     
@@ -209,23 +209,23 @@ def simulatedAnnealingColours_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n,
         cont = cont + 1
         it = (t/l)*n #L
         file.write("--- Total subiteraciones NR: " + str(it)+'\n')
-        it = int(round(it))+1                                                   #para los casos en los que obtengo 0
+        it = int(round(it))+1 #para los casos en los que obtengo 0
         file.write("--- Total subiteraciones R: " + str(it)+'\n')
         
         for i in range (0,it):
-            f = dcel.faces[random.randint(0,n-1)]                               #select random face
+            f = dcel.faces[random.randint(0,n-1)] #select random face
             color = f.color
-            oldPolygons = finiteVoronoi.vorFinitePolygonsList(vor)                         #not delimited
+            oldPolygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             oldLocalSD = symmetricDifference.localSymDif(f, polygons, box)/box.area
             oldSD = symmetricDifference.symDifColours(dcel.faces, oldPolygons, color, box)
-            newPoint = toolsModule.disturbPoint(f.point, f.polygon)           #calculate new point
+            newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------ Subiteracion num: " + str(i)+'\n')
             file.write("------------ newPoint: " + str(newPoint)+'\n')
-            savePoint = f.point                                                 #save old point
-            f.point = newPoint                                                  #change old -> new
-            pSet = dcel.points()                                                #rescue all points with new point
-            vor = Voronoi(pSet)                                                 #recalculate voronoi
-            newPolygons = finiteVoronoi.vorFinitePolygonsList(vor)                         #not delimited
+            savePoint = f.point #save old point
+            f.point = newPoint #change old -> new
+            pSet = dcel.points() #rescue all points with new point
+            vor = Voronoi(pSet) #recalculate voronoi
+            newPolygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             newLocalSD = symmetricDifference.localSymDif(f, polygons, box)/box.area
             newSD = symmetricDifference.symDifColours(dcel.faces, newPolygons, color, box)
             
@@ -263,9 +263,9 @@ def simulatedAnnealingColours_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n,
                 
             polygons = finiteVoronoi.vorFinitePolygonsList(vor)    
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
-            if (sD < bestSD):                                               #if best solution
-                bestSD = sD                                                 #best symmetric difference <- actual symmetric difference
-                bestSet = pSet                                              #best set of generator points <- actual set of generator points
+            if (sD < bestSD): #if best solution
+                bestSD = sD #best symmetric difference <- actual symmetric difference
+                bestSet = pSet #best set of generator points <- actual set of generator points
             
             if (not static):
                 plantingSeeds.distroPoints(dcel, mode)
