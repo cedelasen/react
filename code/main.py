@@ -22,9 +22,9 @@ def process_args():
           "maxExecs": 5,
           "minR": 0,
           "maxR": 1,
-          "relationship": "colours",
-          "method": "and",
-          "colourDistribution": "4rectangles",
+          "relationship": "classic",
+          "method": "",
+          "colourDistribution": "",
           "static": True
   })
   
@@ -48,9 +48,7 @@ def execute(args):
   for i in range(args.i):
       
       start = time.time()
-      
-      #execution.execute(args.l, args.r, args.maxExecs, args.minR, args.maxR, args.relationship, args.method, args.colourDistribution, args.static, imagePath)
-      
+            
       bestPSet, bestSD = execution.execute(args.l, args.r, args.maxExecs, args.minR, args.maxR, args.relationship, args.method, args.colourDistribution, args.static, imagePath)
     
       end = time.time()
@@ -68,13 +66,7 @@ def execute(args):
                             'r' : str(args.r),
                             'maxExecsPS' : str(args.maxExecs),
                             'result': str(bestSD),
-                            'time': str(end - start),
-                            'tempC0': "/", #str(psutil.sensors_temperatures()['coretemp'][1][1]),
-                            'tempC1': "/", #str(psutil.sensors_temperatures()['coretemp'][2][1]),
-                            'tempC2': "/", #str(psutil.sensors_temperatures()['coretemp'][3][1]),
-                            'tempC3': "/", #str(psutil.sensors_temperatures()['coretemp'][4][1]),
-                            'tempC4': "/", #str(psutil.sensors_temperatures()['coretemp'][5][1]),
-                            'tempC5': "/"  #str(psutil.sensors_temperatures()['coretemp'][6][1])
+                            'time': str(end - start)
                             })
           
         #save points 
