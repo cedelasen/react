@@ -27,11 +27,11 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
     bestSD = sD
-    bestSet = None                                                              #best set of points solution
+    bestSet = None #best set of points solution
      
     cont = 0
-    t = tInicial                                                                #|negative|
-    r = ratio                                                                   # + math.log10(n)
+    t = tInicial #|negative|
+    r = ratio # + math.log10(n)
     
     file.write("Number of generating points: " + str(len(pSet))+'\n')
     file.write("Number of faces: " + str(n)+'\n')
@@ -42,26 +42,26 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
         cont = cont + 1
         it = (t/l)*n #L
         file.write("--- Total subiteraciones NR: " + str(it)+'\n')
-        it = int(round(it))+1                                                   #para los casos en los que obtengo 0
+        it = int(round(it))+1 #0 cases
         file.write("--- Total subiteraciones R: " + str(it)+'\n')
         
         for i in range (0,it):
-            f = dcel.faces[random.randint(0,n-1)]                               #select random face
-            peerW = f.randomEdgeNotExt()                                        #random edge not external
-            peerF = peerW.twin.face                                             #wedge twin's face
-            peerPoint = peerF.point                                             #point to index in the voronoi polygons list
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
+            f = dcel.faces[random.randint(0,n-1)] #select random face
+            peerW = f.randomEdgeNotExt() #random edge not external
+            peerF = peerW.twin.face #wedge twin's face
+            peerPoint = peerF.point #point to index in the voronoi polygons list
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             localSD_peer1 = symmetricDifference.localSymDif(f, polygons, box)/box.area
             localSD_peer2 = symmetricDifference.localSymDif(peerF, polygons, box)/box.area
-            newPoint = toolsModule.disturbPoint(f.point, f.polygon)           #calculate new point
+            newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------ Subiteracion num: " + str(i)+'\n')
             file.write("------------ newPoint: " + str(newPoint)+'\n')
             file.write("------------ peerPoint: " + str(peerPoint)+'\n')
-            savePoint = f.point                                                 #save old point
-            f.point = newPoint                                                  #change old -> new
-            pSet = dcel.points()                                                #rescue all points with new point
-            vor = Voronoi(pSet)                                                 #recalculate voronoi
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
+            savePoint = f.point #save old point
+            f.point = newPoint #change old -> new
+            pSet = dcel.points() #rescue all points with new point
+            vor = Voronoi(pSet) #recalculate voronoi
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             newLocalSD_peer1 = symmetricDifference.localSymDif(f, polygons, box)/box.area
             newLocalSD_peer2 = symmetricDifference.localSymDif(peerF, polygons, box)/box.area
             
@@ -80,9 +80,9 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
                     vor = Voronoi(pSet)
                     
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
-            if (sD < bestSD):                                               #if best solution
-                bestSD = sD                                                 #best symmetric difference <- actual symmetric difference
-                bestSet = pSet                                              #best set of generator points <- actual set of generator points
+            if (sD < bestSD): #if best solution
+                bestSD = sD #best symmetric difference <- actual symmetric difference
+                bestSet = pSet #best set of generator points <- actual set of generator points
             
         t = t*r
     file.close
@@ -110,11 +110,11 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
     bestSD = sD
-    bestSet = None                                                              #best set of points solution
+    bestSet = None #best set of points solution
      
     cont = 0
-    t = tInicial                                                                #|negative|
-    r = ratio                                                                   # + math.log10(n)
+    t = tInicial #|negative|
+    r = ratio # + math.log10(n)
  
     file.write("Number of generating points: " + str(len(pSet))+'\n')
     file.write("Number of faces: " + str(n)+'\n')
@@ -125,26 +125,26 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
         cont = cont + 1
         it = (t/l)*n #L
         file.write("--- Total subiteraciones NR: " + str(it)+'\n')
-        it = int(round(it))+1                                                   #para los casos en los que obtengo 0
+        it = int(round(it))+1 #para los casos en los que obtengo 0
         file.write("--- Total subiteraciones R: " + str(it)+'\n')
         
         for i in range (0,it):
-            f = dcel.faces[random.randint(0,n-1)]                               #select random face
-            peerW = f.randomEdgeNotExt()                                        #random edge not external
-            peerF = peerW.twin.face                                             #wedge twin's face
-            peerPoint = peerF.point                                             #point to index in the voronoi polygons list
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
+            f = dcel.faces[random.randint(0,n-1)] #select random face
+            peerW = f.randomEdgeNotExt() #random edge not external
+            peerF = peerW.twin.face #wedge twin's face
+            peerPoint = peerF.point #point to index in the voronoi polygons list
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             localSD_peer1 = symmetricDifference.localSymDif(f, polygons, box)/box.area
             localSD_peer2 = symmetricDifference.localSymDif(peerF, polygons, box)/box.area
-            newPoint = toolsModule.disturbPoint(f.point, f.polygon)           #calculate new point
+            newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------ Subiteracion num: " + str(i)+'\n')
             file.write("------------ newPoint: " + str(newPoint)+'\n')
             file.write("------------ peerPoint: " + str(peerPoint)+'\n')
-            savePoint = f.point                                                 #save old point
-            f.point = newPoint                                                  #change old -> new
-            pSet = dcel.points()                                                #rescue all points with new point
-            vor = Voronoi(pSet)                                                 #recalculate voronoi
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
+            savePoint = f.point #save old point
+            f.point = newPoint #change old -> new
+            pSet = dcel.points() #rescue all points with new point
+            vor = Voronoi(pSet) #recalculate voronoi
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             newLocalSD_peer1 = symmetricDifference.localSymDif(f, polygons, box)/box.area
             newLocalSD_peer2 = symmetricDifference.localSymDif(peerF, polygons, box)/box.area
             
@@ -157,9 +157,9 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
                 vor = Voronoi(pSet)
                     
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
-            if (sD < bestSD):                                               #if best solution
-                bestSD = sD                                                 #best symmetric difference <- actual symmetric difference
-                bestSet = pSet                                              #best set of generator points <- actual set of generator points
+            if (sD < bestSD): #if best solution
+                bestSD = sD #best symmetric difference <- actual symmetric difference
+                bestSet = pSet #best set of generator points <- actual set of generator points
             
         t = t*r
     file.close
@@ -187,11 +187,11 @@ def simulatedAnnealingPeers_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, m
     sD = symmetricDifference.symDif(dcel.faces, polygons, box)                                                                 
     
     bestSD = sD
-    bestSet = None                                                              #best set of points solution
+    bestSet = None #best set of points solution
      
     cont = 0
-    t = tInicial                                                                #|negative|
-    r = ratio                                                                   # + math.log10(n)
+    t = tInicial #|negative|
+    r = ratio # + math.log10(n)
     
     file.write("Number of generating points: " + str(len(pSet))+'\n')
     file.write("Number of faces: " + str(n)+'\n')
@@ -202,26 +202,26 @@ def simulatedAnnealingPeers_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, m
         cont = cont + 1
         it = (t/l)*n #L
         file.write("--- Total subiteraciones NR: " + str(it)+'\n')
-        it = int(round(it))+1                                                   #para los casos en los que obtengo 0
+        it = int(round(it))+1 #para los casos en los que obtengo 0
         file.write("--- Total subiteraciones R: " + str(it)+'\n')
         
         for i in range (0,it):
-            f = dcel.faces[random.randint(0,n-1)]                               #select random face
-            peerW = f.randomEdgeNotExt()                                        #random edge not external
-            peerF = peerW.twin.face                                             #wedge twin's face
-            peerPoint = peerF.point                                             #point to index in the voronoi polygons list
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
+            f = dcel.faces[random.randint(0,n-1)] #select random face
+            peerW = f.randomEdgeNotExt() #random edge not external
+            peerF = peerW.twin.face #wedge twin's face
+            peerPoint = peerF.point #point to index in the voronoi polygons list
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             localSD_peer1 = symmetricDifference.localSymDif(f, polygons, box)/box.area
             localSD_peer2 = symmetricDifference.localSymDif(peerF, polygons, box)/box.area
-            newPoint = toolsModule.disturbPoint(f.point, f.polygon)           #calculate new point
+            newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------ Subiteracion num: " + str(i)+'\n')
             file.write("------------ newPoint: " + str(newPoint)+'\n')
             file.write("------------ peerPoint: " + str(peerPoint)+'\n')
-            savePoint = f.point                                                 #save old point
-            f.point = newPoint                                                  #change old -> new
-            pSet = dcel.points()                                                #rescue all points with new point
-            vor = Voronoi(pSet)                                                 #recalculate voronoi
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)                            #not delimited
+            savePoint = f.point #save old point
+            f.point = newPoint #change old -> new
+            pSet = dcel.points() #rescue all points with new point
+            vor = Voronoi(pSet) #recalculate voronoi
+            polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             newLocalSD_peer1 = symmetricDifference.localSymDif(f, polygons, box)/box.area
             newLocalSD_peer2 = symmetricDifference.localSymDif(peerF, polygons, box)/box.area
             mejora1 = (newLocalSD_peer1<=localSD_peer1)
@@ -257,9 +257,9 @@ def simulatedAnnealingPeers_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, m
                         vor = Voronoi(pSet)
                     
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
-            if (sD < bestSD):                                               #if best solution
-                bestSD = sD                                                 #best symmetric difference <- actual symmetric difference
-                bestSet = pSet                                              #best set of generator points <- actual set of generator points
+            if (sD < bestSD): #if best solution
+                bestSD = sD #best symmetric difference <- actual symmetric difference
+                bestSet = pSet #best set of generator points <- actual set of generator points
             
         t = t*r
     file.close
