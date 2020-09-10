@@ -42,7 +42,7 @@ def meanData(csvPath):
     print("mean of results: " + str(accResults/cont) + " (sD)")
     print("mean time: " + str(datetime.timedelta(seconds=accTime/cont)) + " (hh/mm/ss)")
     
-def schotasticProcess(csvFiles, imgFiles):
+def stochasticProcess(csvFiles, imgFiles):
 
     for (file, img) in zip(csvFiles, imgFiles):
       print(file,img)
@@ -89,4 +89,4 @@ def resumeResults():
 
     print("Args: " + path.replace("/", ","))
     meanData(csvPath)
-    schotasticProcess(csvFiles,imgFiles)
+    stochasticProcess(csvFiles,imgFiles)
