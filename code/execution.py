@@ -104,32 +104,32 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     
     #Execution switch
     if (relationship == "classic"):
-        bestPSet, bestSD, sDs, temps, its = simulatedAnnealing.simulatedAnnealing(dcel, r, tIni, tFin, l, n, minR, maxR)
+        bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealing.simulatedAnnealing(dcel, r, tIni, tFin, l, n, minR, maxR)
     elif (relationship == "peers"):
         if (method == "and"):
-            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "or"):
-            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "numbers"):
-            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         else:
             print("error_peers")
     elif (relationship == "groups"):
         if (method == "and"):
-            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "or"):
-            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "numbers"):
-            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         else:
             print("error_groups")
     elif (relationship == "colours"):
         if (method == "and"):
-            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
+            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
         elif (method == "or"):
-            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
+            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
         elif (method == "numbers"):
-            bestPSet, bestSD, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
+            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
         else:
             print("error_colours")
     else:
@@ -162,5 +162,5 @@ def execute(l, r, maxExecs, minR, maxR, relationship, method, coloursDistributio
     
     plottingModule.plt.savefig(path + repr(bestSD) + '.jpg')
     
-    return bestPSet, bestSD, sDs, temps, its
+    return bestPSet, bestSD, bestsDs, sDs, temps, its
     

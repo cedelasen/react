@@ -25,6 +25,7 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
     polygons = finiteVoronoi.vorFinitePolygonsList(vor) #vor to finiteVoronoi (polygons)
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box) #initial energy (global)
     
+    bestsDs = []
     sDs = []
     temps = []
     its = []
@@ -83,7 +84,8 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
                 bestSD = sD #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
             
-            sDs.append(bestSD)
+            bestsDs.append(bestSD)
+            sDs.append(sD)
             temps.append(t)
             its.append(i)
 
@@ -94,4 +96,4 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its

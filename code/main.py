@@ -19,7 +19,7 @@ def process_args():
           "i": 1,
           "l": 0.06,
           "r": 0.095,
-          "maxExecs": 1,
+          "maxExecs": 3,
           "minR": 0,
           "maxR": 1,
           "relationship": "classic",
@@ -49,7 +49,7 @@ def execute(args):
       
       start = time.time()
             
-      bestPSet, bestSD, sDs, temps, its = execution.execute(args.l, args.r, args.maxExecs, args.minR, args.maxR, args.relationship, args.method, args.colourDistribution, args.static, imagePath)
+      bestPSet, bestSD, bestsDs, sDs, temps, its = execution.execute(args.l, args.r, args.maxExecs, args.minR, args.maxR, args.relationship, args.method, args.colourDistribution, args.static, imagePath)
     
       end = time.time()
     
@@ -69,11 +69,11 @@ def execute(args):
                             'time': str(end - start)
                             })
       with open(csvPath+str(bestSD)+".csv",'a') as f:
-            fnames = ['temp','it','sd']
+            fnames = ['temp','it','bestsd','sd']
             writer = csv.DictWriter(f, fieldnames=fnames)
             writer.writeheader() 
-            for temp,it,sd in zip(temps,its,sDs):
-                writer.writerow({'temp': str(temp),'it': str(it),'sd': str(sd)})
+            for temp,it,bestsd,sd in zip(temps,its,bestsDs,sDs):
+                writer.writerow({'temp': str(temp),'it': str(it),'bestsd': str(bestsd), 'sd': str(sd)})
 
       #save points 
       with open(jsonPath+str(bestSD)+".json", "w") as write_file:
