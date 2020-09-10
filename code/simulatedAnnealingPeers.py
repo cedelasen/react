@@ -90,7 +90,7 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
             
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
         t = t*r
     file.close
@@ -175,7 +175,7 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
             
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
         t = t*r
     file.close
@@ -283,7 +283,7 @@ def simulatedAnnealingPeers_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, m
             
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
         t = t*r
     file.close

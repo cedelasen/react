@@ -136,7 +136,7 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
                     
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
             oldSDs = [] #reboot
             newSDs = []
@@ -272,7 +272,7 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
                     
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
             oldSDs = [] #reboot
             newSDs = []
@@ -432,7 +432,7 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
             
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
             oldSDs = [] #reboot
             newSDs = []

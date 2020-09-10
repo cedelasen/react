@@ -85,7 +85,7 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
             
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
         t = t*r
     file.close

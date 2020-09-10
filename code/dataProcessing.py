@@ -2,74 +2,77 @@
 @author: cedelasen
 """
 
+import data
+import datetime
+import easydict
+import glob
 import csv
 import json
-import plottingModule
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 
-
-csvPath = "out/csv/classic/"
-jsonPath = "out/json/classic/"
-
-axes = plottingModule.plt.gca()
-plottingModule.plt.figure(1)
 
 def process_args():
 
   args = easydict.EasyDict({
-          "i": 1,
-          "l": 0.06,
-          "r": 0.095,
-          "maxExecs": 5,
-          "minR": 0,
-          "maxR": 1,
-          "relationship": "peers",
-          "method": "numbers",
+          "relationship": "classic",
+          "method": "",
           "colourDistribution": "",
           "static": True
   })
   
   return args
 
-def heatMap(csvPath,jsonPath):
-  heatMap = []
-  with open(csvPath+'result.csv') as read_file:
-      reader = csv.DictReader(read_file)
-      for row in reader:
-          #print(row['result'])
-          name = row['result']
-          with open(jsonPath+name+".json", "r") as read_file:
-            data = json.load(read_file)
-            heatMap.append(data)
-            #print(data)
-            #print("--------------")
-            #plottingModule.plotPoints(data, '-ob')
-  return heatMap
-         
-data = heatMap(csvPath, jsonPath)
 
-def resumeData(csvPath):
+def meanData(csvPath):
+
     with open(csvPath+'result.csv') as read_file:
       reader = csv.DictReader(read_file)
-      cont = 0
       accResults = 0
       accTime = 0
-      
+      cont=0
+
       for row in reader:
-          if cont < 80:
-              result = float(row['result'])
-              time = float(row['time'])
-              accResults+=result
-              accTime+=time
-              #print(result)
-              cont+=1
-            
-    print("mean of executions results: " + str(accResults/80))
-    print("mean of execution times: " + str(accTime/80/60))
+          result = float(row['result'])
+          time = float(row['time'])
+          accResults+=result
+          accTime+=time
+          cont+=1
+
+    print("mean of results: " + str(accResults/cont) + " (sD)")
+    print("mean time: " + str(datetime.timedelta(seconds=accTime/cont)) + " (hh/mm/ss)")
     
+def schotasticProcess(csvFiles, imgFiles):
+
+    for (file, img) in zip(csvFiles, imgFiles):
+      print(file,img)
+      cont=0
+      its = []
+      sDs = []
+      bestsDs = [] 
+      img_to_show = mpimg.imread(img)
+      with open(file) as read_file:
+        reader = csv.DictReader(read_file)
+        for row in reader:
+          sDs.append(float(row['sd']))
+          bestsDs.append(float(row['bestsd']))
+          its.append(cont)
+          cont+=1
+      fig, (ax1, ax2) = plt.subplots(1, 2,figsize=(14,5))
+      fig.suptitle("symmetric difference: " + str(bestsDs[-1]))
+      ax2.set_axis_off()
+      ax1.plot(its,sDs, 'b')
+      ax1.plot(its,bestsDs, 'r')
+      ax2.imshow(img_to_show)
+      ax1.set_title('stochastic process')
+      ax1.set(xlabel='iteration', ylabel='symmetric difference')
+      ax2.set_title('voronoi calculated (green) and original partition (black)')
+
+
+def resumeResults():
     
-  
-def resumeResults(args):
-    
+    args = process_args()
+
     if (args.colourDistribution==''):
         if (args.relationship == 'classic'):
             path = args.relationship + "/"
@@ -78,40 +81,12 @@ def resumeResults(args):
     else:
         path = args.relationship + "/" + args.method + "/" + args.colourDistribution + "/" + str(args.static) + "/"
 
-    csvPath = "csv/" + path
-    
-    resumeData(csvPath)
+    #paths to load results
+    csvPath = "out/csv/" + path
+    imgPath = "out/results/" + path
+    csvFiles = glob.glob(csvPath+"0*.csv")
+    imgFiles = glob.glob(imgPath+"0*.jpg")
 
-
-
-def showResults(args):
-
-  if (args.colourDistribution==''):
-    path = args.relationship + "/" + args.method + "/"
-  else:
-    path = args.relationship + "/" + args.method + "/" + args.colourDistribution + "/" + str(args.static) + "/"
-
-  #paths to store results
-  #imagePath = "results/" + path
-  csvPath = "csv/" + path
-  jsonPath = "json/" + path
-  
-  dcel = dcelInstance.dcelInstanceByGeneratorPoints(data.gL, args.iniX, args.finX, args.iniY, args.finY, args.finX, args.finY)
-  for f in dcel.faces: #delete external face from list of dcel's faces
-    if f.external:
-      dcel.faces.remove(f)
-  
-  plottingModule.plotDcel(dcel, 'k')
-  
-  data = heatMap(csvPath, jsonPath)
-  for i in range(0,len(data)): 
-    plottingModule.plotPoints(data[i], '-ob')
-    
-    
-def main():
-  args = process_args()
-  resumeResults(args)
-  showResults(args)
-
-
-main()
+    print("Args: " + path.replace("/", ","))
+    meanData(csvPath)
+    schotasticProcess(csvFiles,imgFiles)

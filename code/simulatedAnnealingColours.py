@@ -90,7 +90,7 @@ def simulatedAnnealingColours_AndMethod(dcel, ratio, tInicial, tFinal, l, n, min
             
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
             if (not static):
                 plantingSeeds.distroPoints(dcel, mode)
@@ -176,7 +176,7 @@ def simulatedAnnealingColours_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minR
             
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
             if (not static):
                 plantingSeeds.distroPoints(dcel, mode)
@@ -289,7 +289,7 @@ def simulatedAnnealingColours_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n,
             
             sDs.append(bestSD)
             temps.append(t)
-            its.append(it)
+            its.append(i)
 
             if (not static):
                 plantingSeeds.distroPoints(dcel, mode)
