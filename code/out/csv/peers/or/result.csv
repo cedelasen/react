@@ -1,0 +1,5 @@
+relationship,method,colourDistribution,static,l,r,maxExecsPS,result,time
+
+peers,or,,True,0.06,0.095,3,0.06787121237468877,132.23404550552368
+peers,or,,True,0.06,0.095,3,0.06805283118866824,135.47091341018677
+peers,or,,True,0.06,0.095,3,0.06926561565988093,164.12529134750366

@@ -1,1 +1,4 @@
 relationship,method,colourDistribution,static,l,r,maxExecsPS,result,time
+groups,or,,True,0.06,0.095,3,0.06834943414128465,125.89008164405823
+groups,or,,True,0.06,0.095,3,0.06928528937171544,186.11634874343872
+groups,or,,True,0.06,0.095,3,0.06928161869298843,206.10548162460327
