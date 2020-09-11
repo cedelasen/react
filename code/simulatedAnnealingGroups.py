@@ -176,7 +176,7 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     its = []
 
     bestSD = sD
-    bestSet = None #best set of points solution
+    bestSet = pSet #best set of points solution
      
     cont = 0
     t = tInicial #|negative|
