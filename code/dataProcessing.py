@@ -85,12 +85,12 @@ def meanData(csvPath):
     os.remove(csvPath+'result_resume.csv')
 
     with open(csvPath+'result_resume.csv','a') as f:
-          fnames = ['execs_PS','r','l','result','time','n']
+          fnames = ['PS','r','l','result','time','n']
           writer = csv.DictWriter(f, fieldnames=fnames)
           writer.writeheader() #new file
           for res in to_save:
             writer.writerow({
-              'execs_PS':res[0],
+              'PS':res[0],
               'r':res[1],
               'l':res[2],
               'result':res[3],
