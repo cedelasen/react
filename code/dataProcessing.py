@@ -44,7 +44,7 @@ def meanData(csvPath):
     
 def stochasticProcess(csvFiles, imgFiles):
 
-    for (file, img) in zip(csvFiles, imgFiles):
+    for (file, img) in zip( sorted(csvFiles),sorted(imgFiles) ):
       cont=0
       its = []
       sDs = []
