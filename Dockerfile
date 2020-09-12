@@ -19,7 +19,7 @@ RUN conda create -n react python=3.6
 
 RUN echo "source activate react" > ~/.bashrc
 
-RUN conda install -n react scipy matplotlib shapely sympy psutil pillow jupyter
+RUN conda install -n react scipy matplotlib shapely sympy psutil pillow jupyter pandas
 
 RUN conda install -n react -c conda-forge easydict
 
