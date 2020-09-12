@@ -8,6 +8,8 @@ import easydict
 import glob
 import csv
 import json
+import pandas
+import os
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
@@ -26,22 +28,77 @@ def process_args():
 
 def meanData(csvPath):
 
-    with open(csvPath+'result.csv') as read_file:
-      reader = csv.DictReader(read_file)
-      accResults = 0
-      accTime = 0
-      cont=0
+    colnames = ["relationship","method","colourDistribution","static","l","r","maxExecsPS","result","time"]
+    data = pandas.read_csv(csvPath+'result.csv', names=colnames)
 
-      for row in reader:
-          result = float(row['result'])
-          time = float(row['time'])
-          accResults+=result
-          accTime+=time
-          cont+=1
+    l_set = list(set(data.l.tolist()[1:]))
+    r_set = list(set(data.r.tolist()[1:]))
+    execPS_set = list(set(data.maxExecsPS.tolist()[1:]))
 
-    print("mean of results: " + str(accResults/cont) + " (sD)")
-    print("mean time: " + str(datetime.timedelta(seconds=accTime/cont)) + " (hh/mm/ss)")
-    
+    to_save = []
+
+    print("PS\tl\tr\tmean")
+    for execPS_i in execPS_set:
+      print(execPS_i)
+      for r_i in r_set:
+        print("\t"+r_i)
+        for l_i in l_set:
+          print("\t\t"+l_i)
+          with open(csvPath+'result.csv') as read_file:
+            reader = csv.DictReader(read_file)
+
+            accResults = 0
+            accTime = 0
+            cont = 0
+
+            for row in reader:
+              execPS = int(row['maxExecsPS'])
+              r = float(row['r'])
+              l = float(row['l'])
+              result = float(row['result'])
+              time = float(row['time'])
+
+              check_execs = (int(execPS_i)==execPS)
+              check_r = (float(r_i)==r)
+              check_l = (float(l_i)==l)
+
+              # print("\t\t\t"+str(check_execs))
+              # print("\t\t\t"+str(check_r))
+              # print("\t\t\t"+str(check_l))
+              # print("\t\t\t\t"+str(execPS),str(r),str(l),str(result),str(time))
+
+              if check_execs and check_r and check_l:
+                #print("\t\t\t\t IN")
+                accResults+=result
+                accTime+=time
+                cont+=1
+
+              #print("\t\t\t"+"-----------------------------------------------")
+
+            print("\t\t\tmean of results: " + str(accResults/cont) + " (sD)")
+            print("\t\t\tmean time: " + str(datetime.timedelta(seconds=accTime/cont)) + " (hh/mm/ss)")
+            print("\t\t\tn: " + str(cont) )
+            res=[execPS_i,r_i,l_i,str(accResults/cont),str(datetime.timedelta(seconds=accTime/cont)),str(cont)]
+            to_save.append(res)
+            #print(res)
+
+    os.remove(csvPath+'result_resume.csv')
+
+    with open(csvPath+'result_resume.csv','a') as f:
+          fnames = ['execs_PS','r','l','result','time','n']
+          writer = csv.DictWriter(f, fieldnames=fnames)
+          writer.writeheader() #new file
+          for res in to_save:
+            writer.writerow({
+              'execs_PS':res[0],
+              'r':res[1],
+              'l':res[2],
+              'result':res[3],
+              'time':res[4],
+              'n':res[5]
+            })
+
+
 def stochasticProcess(csvFiles, imgFiles):
 
     for (file, img) in zip( sorted(csvFiles),sorted(imgFiles) ):
@@ -80,12 +137,14 @@ def resumeResults():
     else:
         path = args.relationship + "/" + args.method + "/" + args.colourDistribution + "/" + str(args.static) + "/"
 
+    print("Resume of results -- " + path[:-1])
+    print()
+
     #paths to load results
     csvPath = "out/csv/" + path
     imgPath = "out/results/" + path
     csvFiles = glob.glob(csvPath+"0*.csv")
     imgFiles = glob.glob(imgPath+"0*.jpg")
 
-    print("Args: " + path.replace("/", ","))
     meanData(csvPath)
     stochasticProcess(csvFiles,imgFiles)
