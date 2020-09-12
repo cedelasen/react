@@ -1,3 +1,5 @@
 relationship,method,colourDistribution,static,l,r,maxExecsPS,result,time
 colours,or,random2colours,True,0.06,0.095,3,0.06928528937171544,138.48932647705078
 colours,or,random2colours,True,0.06,0.095,3,0.06928528937171544,139.9478087425232
+colours,or,random2colours,True,0.06,0.15,3,0.06928528937171544,153.4070975780487
+colours,or,random2colours,True,0.06,0.15,3,0.06928528937171544,140.4990348815918

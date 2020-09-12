@@ -1,4 +1,5 @@
 relationship,method,colourDistribution,static,l,r,maxExecsPS,result,time
 colours,and,4rectangles,True,0.06,0.095,3,0.06928528937171544,141.59730124473572
 colours,and,4rectangles,True,0.06,0.095,3,0.06928528937171544,145.99650692939758
-colours,and,4rectangles,True,0.06,0.095,3,0.06928528937171544,140.26034927368164
+colours,and,4rectangles,True,0.06,0.15,3,0.06928528937171544,151.6875205039978
+colours,and,4rectangles,True,0.06,0.15,3,0.06928528937171544,151.61919116973877
