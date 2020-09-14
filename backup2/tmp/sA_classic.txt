@@ -1,0 +1,1797 @@
+Number of generating points: 29
+Number of faces: 29
+Temperatura del sistema: 0.8625456224658721
+Iteracion: 0
+--- Total subiteraciones NR: 416.8970508585049
+--- Total subiteraciones R: 418
+------ Subiteracion num: 0
+------------ newPoint: [211.11647905222, 75.75105533459585]
+Energia local no mejorada con nuevo punto : [211.11647905222, 75.75105533459585]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 1
+------------ newPoint: [220.32344291241816, 336.76771570627767]
+Energia local no mejorada con nuevo punto : [220.32344291241816, 336.76771570627767]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 2
+------------ newPoint: [311.25677129584045, 388.7323737231751]
+Energia local no mejorada con nuevo punto : [311.25677129584045, 388.7323737231751]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 3
+------------ newPoint: [10.369768296757712, 347.64038924391053]
+Energia local no mejorada con nuevo punto : [10.369768296757712, 347.64038924391053]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 4
+------------ newPoint: [582.6620192468987, 424.16759768878273]
+Energia local no mejorada con nuevo punto : [582.6620192468987, 424.16759768878273]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 5
+------------ newPoint: [86.73607076225748, -31.986977057852368]
+Energia local no mejorada con nuevo punto : [86.73607076225748, -31.986977057852368]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 6
+------------ newPoint: [19.55628254564939, 237.812502331587]
+Energia local no mejorada con nuevo punto : [19.55628254564939, 237.812502331587]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 7
+------------ newPoint: [169.2861054810844, 400.2387908579868]
+Energia local no mejorada con nuevo punto : [169.2861054810844, 400.2387908579868]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 8
+------------ newPoint: [485.8238873442413, 172.17675077295567]
+Energia local no mejorada con nuevo punto : [485.8238873442413, 172.17675077295567]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 9
+------------ newPoint: [392.032232621736, 316.51691945981446]
+Energia local no mejorada con nuevo punto : [392.032232621736, 316.51691945981446]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 10
+------------ newPoint: [205.15917660067942, 328.793048627372]
+Energia local no mejorada con nuevo punto : [205.15917660067942, 328.793048627372]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 11
+------------ newPoint: [202.06839240834952, 76.35380285011826]
+Energia local no mejorada con nuevo punto : [202.06839240834952, 76.35380285011826]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 12
+------------ newPoint: [441.54336943455394, 252.4811341489381]
+Energia local no mejorada con nuevo punto : [441.54336943455394, 252.4811341489381]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 13
+------------ newPoint: [47.28938245939028, 431.06259119791173]
+Energia local mejorada con nuevo punto : [47.28938245939028, 431.06259119791173]
+------ Subiteracion num: 14
+------------ newPoint: [513.7373390581264, 342.77069634196283]
+Energia local no mejorada con nuevo punto : [513.7373390581264, 342.77069634196283]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 15
+------------ newPoint: [641.701469139918, 310.0614729250245]
+Energia local no mejorada con nuevo punto : [641.701469139918, 310.0614729250245]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 16
+------------ newPoint: [171.48531112461166, 139.17947032133972]
+Energia local no mejorada con nuevo punto : [171.48531112461166, 139.17947032133972]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 17
+------------ newPoint: [11.65219793340077, 344.9509773826428]
+Energia local no mejorada con nuevo punto : [11.65219793340077, 344.9509773826428]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 18
+------------ newPoint: [330.67168248403317, 413.91884635714086]
+Energia local no mejorada con nuevo punto : [330.67168248403317, 413.91884635714086]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 19
+------------ newPoint: [632.5944344960603, 220.36366167578797]
+Energia local no mejorada con nuevo punto : [632.5944344960603, 220.36366167578797]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 20
+------------ newPoint: [41.57920481979277, 235.85707588507762]
+Energia local no mejorada con nuevo punto : [41.57920481979277, 235.85707588507762]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 21
+------------ newPoint: [146.2365443123763, 127.31228520681043]
+Energia local mejorada con nuevo punto : [146.2365443123763, 127.31228520681043]
+------ Subiteracion num: 22
+------------ newPoint: [586.4959611430751, 232.22827772586623]
+Energia local no mejorada con nuevo punto : [586.4959611430751, 232.22827772586623]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 23
+------------ newPoint: [642.3461849670468, 307.91760015613215]
+Energia local mejorada con nuevo punto : [642.3461849670468, 307.91760015613215]
+------ Subiteracion num: 24
+------------ newPoint: [643.7566661340585, 306.6334375424347]
+Energia local no mejorada con nuevo punto : [643.7566661340585, 306.6334375424347]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 25
+------------ newPoint: [649.2446205731992, 206.53458633039105]
+Energia local no mejorada con nuevo punto : [649.2446205731992, 206.53458633039105]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 26
+------------ newPoint: [447.305719815355, 418.74015989216]
+Energia local mejorada con nuevo punto : [447.305719815355, 418.74015989216]
+------ Subiteracion num: 27
+------------ newPoint: [564.982017028837, 221.75925879337382]
+Energia local no mejorada con nuevo punto : [564.982017028837, 221.75925879337382]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 28
+------------ newPoint: [232.26933819532852, 321.20898730917486]
+Energia local no mejorada con nuevo punto : [232.26933819532852, 321.20898730917486]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 29
+------------ newPoint: [10.559230032959436, 344.62720868627196]
+Energia local no mejorada con nuevo punto : [10.559230032959436, 344.62720868627196]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 30
+------------ newPoint: [204.4156194360529, 218.02589111021197]
+Energia local no mejorada con nuevo punto : [204.4156194360529, 218.02589111021197]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 31
+------------ newPoint: [567.751757681971, 88.94295437060153]
+Energia local no mejorada con nuevo punto : [567.751757681971, 88.94295437060153]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 32
+------------ newPoint: [589.2331440967445, 235.57191972141575]
+Energia local no mejorada con nuevo punto : [589.2331440967445, 235.57191972141575]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 33
+------------ newPoint: [7.909365942877101, 352.4525439808302]
+Energia local no mejorada con nuevo punto : [7.909365942877101, 352.4525439808302]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 34
+------------ newPoint: [96.26806719543596, -42.21972281999512]
+Energia local no mejorada con nuevo punto : [96.26806719543596, -42.21972281999512]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 35
+------------ newPoint: [225.3304557287403, 198.63904847553704]
+Energia local no mejorada con nuevo punto : [225.3304557287403, 198.63904847553704]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 36
+------------ newPoint: [6.067927221586949, 354.9949647066176]
+Energia local no mejorada con nuevo punto : [6.067927221586949, 354.9949647066176]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 37
+------------ newPoint: [442.83071512036486, 254.93374524577567]
+Energia local no mejorada con nuevo punto : [442.83071512036486, 254.93374524577567]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 38
+------------ newPoint: [40.948569523318305, 245.3154331981859]
+Energia local no mejorada con nuevo punto : [40.948569523318305, 245.3154331981859]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 39
+------------ newPoint: [230.86664816500192, 324.0529516679025]
+Energia local mejorada con nuevo punto : [230.86664816500192, 324.0529516679025]
+------ Subiteracion num: 40
+------------ newPoint: [327.09486647044054, 83.27910132933341]
+Energia local mejorada con nuevo punto : [327.09486647044054, 83.27910132933341]
+------ Subiteracion num: 41
+------------ newPoint: [639.4951315684522, 311.63135034898875]
+Energia local no mejorada con nuevo punto : [639.4951315684522, 311.63135034898875]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 42
+------------ newPoint: [488.8454014407918, 153.62876949176857]
+Energia local mejorada con nuevo punto : [488.8454014407918, 153.62876949176857]
+------ Subiteracion num: 43
+------------ newPoint: [341.43071847148155, 263.2584982071355]
+Energia local no mejorada con nuevo punto : [341.43071847148155, 263.2584982071355]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 44
+------------ newPoint: [310.213742608292, 392.82377799899496]
+Energia local mejorada con nuevo punto : [310.213742608292, 392.82377799899496]
+------ Subiteracion num: 45
+------------ newPoint: [652.9665403228738, 207.2158528206262]
+Energia local no mejorada con nuevo punto : [652.9665403228738, 207.2158528206262]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 46
+------------ newPoint: [32.92432641930974, 15.888366026451047]
+Energia local no mejorada con nuevo punto : [32.92432641930974, 15.888366026451047]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 47
+------------ newPoint: [11.191859583118376, 346.08628083493977]
+Energia local no mejorada con nuevo punto : [11.191859583118376, 346.08628083493977]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 48
+------------ newPoint: [595.4281375392544, 224.04735907777]
+Energia local no mejorada con nuevo punto : [595.4281375392544, 224.04735907777]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 49
+------------ newPoint: [629.2416575976089, 128.2555685728139]
+Energia local no mejorada con nuevo punto : [629.2416575976089, 128.2555685728139]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 50
+------------ newPoint: [58.88621717354425, 236.91628025821578]
+Energia local no mejorada con nuevo punto : [58.88621717354425, 236.91628025821578]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 51
+------------ newPoint: [632.8656974902717, 131.13066323037958]
+Energia local no mejorada con nuevo punto : [632.8656974902717, 131.13066323037958]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 52
+------------ newPoint: [319.4511379279944, 97.56119866908922]
+Energia local no mejorada con nuevo punto : [319.4511379279944, 97.56119866908922]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 53
+------------ newPoint: [10.41101427573813, 343.9532734353104]
+Energia local no mejorada con nuevo punto : [10.41101427573813, 343.9532734353104]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 54
+------------ newPoint: [447.8717329685477, 417.1576426133453]
+Energia local mejorada con nuevo punto : [447.8717329685477, 417.1576426133453]
+------ Subiteracion num: 55
+------------ newPoint: [102.85313091524054, 314.79787930795413]
+Energia local no mejorada con nuevo punto : [102.85313091524054, 314.79787930795413]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 56
+------------ newPoint: [340.9707116024314, 394.70659440926306]
+Energia local no mejorada con nuevo punto : [340.9707116024314, 394.70659440926306]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 57
+------------ newPoint: [581.1527377917131, 421.6217428237296]
+Energia local mejorada con nuevo punto : [581.1527377917131, 421.6217428237296]
+------ Subiteracion num: 58
+------------ newPoint: [341.1264577125545, 263.5791420388647]
+Energia local mejorada con nuevo punto : [341.1264577125545, 263.5791420388647]
+------ Subiteracion num: 59
+------------ newPoint: [341.2984522297167, 263.1898256550468]
+Energia local no mejorada con nuevo punto : [341.2984522297167, 263.1898256550468]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 60
+------------ newPoint: [438.8730240959065, 260.91861916501216]
+Energia local no mejorada con nuevo punto : [438.8730240959065, 260.91861916501216]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 61
+------------ newPoint: [639.005564482644, 307.67873447902826]
+Energia local no mejorada con nuevo punto : [639.005564482644, 307.67873447902826]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 62
+------------ newPoint: [567.7480426429374, 91.52009866789192]
+Energia local no mejorada con nuevo punto : [567.7480426429374, 91.52009866789192]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 63
+------------ newPoint: [370.02324083351647, 179.46779025345884]
+Energia local no mejorada con nuevo punto : [370.02324083351647, 179.46779025345884]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 64
+------------ newPoint: [446.78468117742324, 418.02774184842156]
+Energia local no mejorada con nuevo punto : [446.78468117742324, 418.02774184842156]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 65
+------------ newPoint: [391.6295769698881, 316.5110991677869]
+Energia local no mejorada con nuevo punto : [391.6295769698881, 316.5110991677869]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 66
+------------ newPoint: [650.8144196555465, 216.50976890722484]
+Energia local no mejorada con nuevo punto : [650.8144196555465, 216.50976890722484]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 67
+------------ newPoint: [448.4073214493897, 417.3894682225386]
+Energia local no mejorada con nuevo punto : [448.4073214493897, 417.3894682225386]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 68
+------------ newPoint: [98.02042928413661, -41.16691974531016]
+Energia local no mejorada con nuevo punto : [98.02042928413661, -41.16691974531016]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 69
+------------ newPoint: [33.65486238473744, 7.0864783186394344]
+Energia local no mejorada con nuevo punto : [33.65486238473744, 7.0864783186394344]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 70
+------------ newPoint: [219.8826004557631, 308.0895874396287]
+Energia local no mejorada con nuevo punto : [219.8826004557631, 308.0895874396287]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 71
+------------ newPoint: [437.9579000336956, 251.42617947850573]
+Energia local mejorada con nuevo punto : [437.9579000336956, 251.42617947850573]
+------ Subiteracion num: 72
+------------ newPoint: [448.9725631447819, 416.5748111108265]
+Energia local no mejorada con nuevo punto : [448.9725631447819, 416.5748111108265]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 73
+------------ newPoint: [632.6826388107664, 231.48621479367154]
+Energia local no mejorada con nuevo punto : [632.6826388107664, 231.48621479367154]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 74
+------------ newPoint: [36.254970953041955, 220.334337290302]
+Energia local no mejorada con nuevo punto : [36.254970953041955, 220.334337290302]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 75
+------------ newPoint: [177.41725938672255, 393.9838967465401]
+Energia local no mejorada con nuevo punto : [177.41725938672255, 393.9838967465401]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 76
+------------ newPoint: [651.3636385852867, 207.60728684701047]
+Energia local no mejorada con nuevo punto : [651.3636385852867, 207.60728684701047]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 77
+------------ newPoint: [29.893406056735984, 232.5798554625702]
+Energia local no mejorada con nuevo punto : [29.893406056735984, 232.5798554625702]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 78
+------------ newPoint: [485.583949866085, 168.16228627154484]
+Energia local no mejorada con nuevo punto : [485.583949866085, 168.16228627154484]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 79
+------------ newPoint: [369.6505877099627, 179.5044124130867]
+Energia local no mejorada con nuevo punto : [369.6505877099627, 179.5044124130867]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 80
+------------ newPoint: [580.8479027977208, 423.384344208784]
+Energia local no mejorada con nuevo punto : [580.8479027977208, 423.384344208784]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 81
+------------ newPoint: [437.9897167915515, 251.5383092725674]
+Energia local no mejorada con nuevo punto : [437.9897167915515, 251.5383092725674]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 82
+------------ newPoint: [259.45805947008654, 153.36313258608502]
+Energia local no mejorada con nuevo punto : [259.45805947008654, 153.36313258608502]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 83
+------------ newPoint: [31.647633650506997, 24.13380771362534]
+Energia local mejorada con nuevo punto : [31.647633650506997, 24.13380771362534]
+------ Subiteracion num: 84
+------------ newPoint: [203.48231605224746, 63.6458798554486]
+Energia local mejorada con nuevo punto : [203.48231605224746, 63.6458798554486]
+------ Subiteracion num: 85
+------------ newPoint: [632.3091836524275, 128.5452048019177]
+Energia local no mejorada con nuevo punto : [632.3091836524275, 128.5452048019177]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 86
+------------ newPoint: [215.37081510128084, 65.74134955688758]
+Energia local no mejorada con nuevo punto : [215.37081510128084, 65.74134955688758]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 87
+------------ newPoint: [45.98226256155756, 431.11133321987313]
+Energia local no mejorada con nuevo punto : [45.98226256155756, 431.11133321987313]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 88
+------------ newPoint: [635.4594867053048, 128.84827078620228]
+Energia local no mejorada con nuevo punto : [635.4594867053048, 128.84827078620228]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 89
+------------ newPoint: [310.088178502957, 111.13346356570689]
+Energia local no mejorada con nuevo punto : [310.088178502957, 111.13346356570689]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 90
+------------ newPoint: [636.3953379520325, 233.21301152328627]
+Energia local no mejorada con nuevo punto : [636.3953379520325, 233.21301152328627]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 91
+------------ newPoint: [495.32698978033517, 111.56445682120152]
+Energia local no mejorada con nuevo punto : [495.32698978033517, 111.56445682120152]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 92
+------------ newPoint: [105.61508808268007, -39.061902548209346]
+Energia local mejorada con nuevo punto : [105.61508808268007, -39.061902548209346]
+------ Subiteracion num: 93
+------------ newPoint: [5.999054769014549, 350.7221551149799]
+Energia local no mejorada con nuevo punto : [5.999054769014549, 350.7221551149799]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 94
+------------ newPoint: [581.6766403477247, 234.39823377455204]
+Energia local no mejorada con nuevo punto : [581.6766403477247, 234.39823377455204]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 95
+------------ newPoint: [391.67199657367485, 316.3457991625634]
+Energia local no mejorada con nuevo punto : [391.67199657367485, 316.3457991625634]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 96
+------------ newPoint: [562.0178772606984, 88.76535404877387]
+Energia local no mejorada con nuevo punto : [562.0178772606984, 88.76535404877387]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 97
+------------ newPoint: [163.79017709976182, 404.5610771530362]
+Energia local no mejorada con nuevo punto : [163.79017709976182, 404.5610771530362]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 98
+------------ newPoint: [584.0286117724387, 223.9830034600904]
+Energia local no mejorada con nuevo punto : [584.0286117724387, 223.9830034600904]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 99
+------------ newPoint: [118.64848148113353, 337.14371293019894]
+Energia local no mejorada con nuevo punto : [118.64848148113353, 337.14371293019894]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 100
+------------ newPoint: [441.09210286081395, 252.78741866578608]
+Energia local no mejorada con nuevo punto : [441.09210286081395, 252.78741866578608]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 101
+------------ newPoint: [369.60172124431364, 179.50789211759525]
+Energia local no mejorada con nuevo punto : [369.60172124431364, 179.50789211759525]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 102
+------------ newPoint: [323.0543701707126, 356.4764195670185]
+Energia local no mejorada con nuevo punto : [323.0543701707126, 356.4764195670185]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 103
+------------ newPoint: [102.70087114168405, -33.41940103777772]
+Energia local no mejorada con nuevo punto : [102.70087114168405, -33.41940103777772]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 104
+------------ newPoint: [327.640640790353, 85.47388231939284]
+Energia local no mejorada con nuevo punto : [327.640640790353, 85.47388231939284]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 105
+------------ newPoint: [167.98954289796177, 400.95309105221287]
+Energia local no mejorada con nuevo punto : [167.98954289796177, 400.95309105221287]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 106
+------------ newPoint: [307.0300627920868, 399.855969674189]
+Energia local mejorada con nuevo punto : [307.0300627920868, 399.855969674189]
+------ Subiteracion num: 107
+------------ newPoint: [447.87065037974685, 417.17735372809983]
+Energia local no mejorada con nuevo punto : [447.87065037974685, 417.17735372809983]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 108
+------------ newPoint: [341.3604532464375, 263.845497200992]
+Energia local no mejorada con nuevo punto : [341.3604532464375, 263.845497200992]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 109
+------------ newPoint: [369.7570003314998, 179.35087137997232]
+Energia local no mejorada con nuevo punto : [369.7570003314998, 179.35087137997232]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 110
+------------ newPoint: [641.0670991695725, 220.79806279413066]
+Energia local no mejorada con nuevo punto : [641.0670991695725, 220.79806279413066]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 111
+------------ newPoint: [315.6676328058691, 411.2993683410755]
+Energia local no mejorada con nuevo punto : [315.6676328058691, 411.2993683410755]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 112
+------------ newPoint: [11.049068062707876, 345.07897855431247]
+Energia local no mejorada con nuevo punto : [11.049068062707876, 345.07897855431247]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 113
+------------ newPoint: [582.5031362319367, 232.5417044752795]
+Energia local mejorada con nuevo punto : [582.5031362319367, 232.5417044752795]
+------ Subiteracion num: 114
+------------ newPoint: [582.7309334073941, 231.15411403389106]
+Energia local no mejorada con nuevo punto : [582.7309334073941, 231.15411403389106]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 115
+------------ newPoint: [9.224160958454945, 347.83714406770133]
+Energia local no mejorada con nuevo punto : [9.224160958454945, 347.83714406770133]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 116
+------------ newPoint: [83.4175135881028, 247.78082721258636]
+Energia local no mejorada con nuevo punto : [83.4175135881028, 247.78082721258636]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 117
+------------ newPoint: [391.88737473159387, 317.1159784967034]
+Energia local no mejorada con nuevo punto : [391.88737473159387, 317.1159784967034]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 118
+------------ newPoint: [577.681408927753, 245.69728394247005]
+Energia local no mejorada con nuevo punto : [577.681408927753, 245.69728394247005]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 119
+------------ newPoint: [642.8296155482784, 221.83799724150217]
+Energia local no mejorada con nuevo punto : [642.8296155482784, 221.83799724150217]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 120
+------------ newPoint: [638.7077948239114, 130.3474499760283]
+Energia local no mejorada con nuevo punto : [638.7077948239114, 130.3474499760283]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 121
+------------ newPoint: [589.5830298092934, 227.80683479970943]
+Energia local no mejorada con nuevo punto : [589.5830298092934, 227.80683479970943]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 122
+------------ newPoint: [635.3853754687476, 126.22949270292486]
+Energia local no mejorada con nuevo punto : [635.3853754687476, 126.22949270292486]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 123
+------------ newPoint: [47.01534164509401, 430.5732053210718]
+Energia local no mejorada con nuevo punto : [47.01534164509401, 430.5732053210718]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 124
+------------ newPoint: [118.80732580748894, 148.6143878916877]
+Energia local no mejorada con nuevo punto : [118.80732580748894, 148.6143878916877]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 125
+------------ newPoint: [642.7528291479509, 307.86536521401706]
+Energia local no mejorada con nuevo punto : [642.7528291479509, 307.86536521401706]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 126
+------------ newPoint: [648.1953517760361, 217.42912750421385]
+Energia local no mejorada con nuevo punto : [648.1953517760361, 217.42912750421385]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 127
+------------ newPoint: [583.0435588981386, 232.37656572537495]
+Energia local no mejorada con nuevo punto : [583.0435588981386, 232.37656572537495]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 128
+------------ newPoint: [634.6576188850057, 129.63400279001945]
+Energia local no mejorada con nuevo punto : [634.6576188850057, 129.63400279001945]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 129
+------------ newPoint: [38.60757040388502, 37.87807498680897]
+Energia local no mejorada con nuevo punto : [38.60757040388502, 37.87807498680897]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 130
+------------ newPoint: [56.2905934528386, 430.41062727145993]
+Energia local no mejorada con nuevo punto : [56.2905934528386, 430.41062727145993]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 131
+------------ newPoint: [640.3463975065565, 212.45766111638906]
+Energia local no mejorada con nuevo punto : [640.3463975065565, 212.45766111638906]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 132
+------------ newPoint: [45.91516144714539, 231.2564638395712]
+Energia local no mejorada con nuevo punto : [45.91516144714539, 231.2564638395712]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 133
+------------ newPoint: [168.7377824715281, 400.05530461938076]
+Energia local no mejorada con nuevo punto : [168.7377824715281, 400.05530461938076]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 134
+------------ newPoint: [439.4438998038333, 74.35217967329788]
+Energia local no mejorada con nuevo punto : [439.4438998038333, 74.35217967329788]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 135
+------------ newPoint: [578.3550711395458, 229.6903119705811]
+Energia local mejorada con nuevo punto : [578.3550711395458, 229.6903119705811]
+------ Subiteracion num: 136
+------------ newPoint: [231.61881443959473, 325.61169689012354]
+Energia local mejorada con nuevo punto : [231.61881443959473, 325.61169689012354]
+------ Subiteracion num: 137
+------------ newPoint: [580.6430093867938, 236.6169176562993]
+Energia local no mejorada con nuevo punto : [580.6430093867938, 236.6169176562993]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 138
+------------ newPoint: [9.615010022676548, 345.34365463212475]
+Energia local mejorada con nuevo punto : [9.615010022676548, 345.34365463212475]
+------ Subiteracion num: 139
+------------ newPoint: [190.54019163032157, 64.30444489907983]
+Energia local no mejorada con nuevo punto : [190.54019163032157, 64.30444489907983]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 140
+------------ newPoint: [391.4295558353405, 317.0282822188123]
+Energia local mejorada con nuevo punto : [391.4295558353405, 317.0282822188123]
+------ Subiteracion num: 141
+------------ newPoint: [561.7852700721025, 88.54561419229326]
+Energia local no mejorada con nuevo punto : [561.7852700721025, 88.54561419229326]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 142
+------------ newPoint: [333.7102843776506, 78.16469594497457]
+Energia local no mejorada con nuevo punto : [333.7102843776506, 78.16469594497457]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 143
+------------ newPoint: [447.34161334818157, 136.412694519497]
+Energia local no mejorada con nuevo punto : [447.34161334818157, 136.412694519497]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 144
+------------ newPoint: [341.199599684789, 263.5377035599811]
+Energia local no mejorada con nuevo punto : [341.199599684789, 263.5377035599811]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 145
+------------ newPoint: [309.3236995925588, 410.7709468444209]
+Energia local no mejorada con nuevo punto : [309.3236995925588, 410.7709468444209]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 146
+------------ newPoint: [148.79632007695258, 129.69106901518978]
+Energia local mejorada con nuevo punto : [148.79632007695258, 129.69106901518978]
+------ Subiteracion num: 147
+------------ newPoint: [433.1991845819011, 29.82268899492879]
+Energia local no mejorada con nuevo punto : [433.1991845819011, 29.82268899492879]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 148
+------------ newPoint: [88.01071445165927, 235.4816918811636]
+Energia local no mejorada con nuevo punto : [88.01071445165927, 235.4816918811636]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 149
+------------ newPoint: [200.24869859358208, 62.14646185843675]
+Energia local no mejorada con nuevo punto : [200.24869859358208, 62.14646185843675]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 150
+------------ newPoint: [17.084231629354363, 333.80454565010535]
+Energia local no mejorada con nuevo punto : [17.084231629354363, 333.80454565010535]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 151
+------------ newPoint: [29.237673193615663, 9.601826847873804]
+Energia local no mejorada con nuevo punto : [29.237673193615663, 9.601826847873804]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 152
+------------ newPoint: [115.76785987951467, 381.9502960160263]
+Energia local no mejorada con nuevo punto : [115.76785987951467, 381.9502960160263]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 153
+------------ newPoint: [387.3394564529251, 101.57829039601461]
+Energia local no mejorada con nuevo punto : [387.3394564529251, 101.57829039601461]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 154
+------------ newPoint: [507.11678678499607, 168.76682859052974]
+Energia local no mejorada con nuevo punto : [507.11678678499607, 168.76682859052974]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 155
+------------ newPoint: [149.5507873972079, 125.92470466932953]
+Energia local no mejorada con nuevo punto : [149.5507873972079, 125.92470466932953]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 156
+------------ newPoint: [357.16438690135783, 55.21672269713229]
+Energia local no mejorada con nuevo punto : [357.16438690135783, 55.21672269713229]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 157
+------------ newPoint: [195.11473362318023, 60.26286448173783]
+Energia local no mejorada con nuevo punto : [195.11473362318023, 60.26286448173783]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 158
+------------ newPoint: [581.1579918427751, 421.6225473499772]
+Energia local no mejorada con nuevo punto : [581.1579918427751, 421.6225473499772]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 159
+------------ newPoint: [186.72378151353502, 78.76664459990747]
+Energia local no mejorada con nuevo punto : [186.72378151353502, 78.76664459990747]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 160
+------------ newPoint: [341.2448647947615, 263.66579798830116]
+Energia local no mejorada con nuevo punto : [341.2448647947615, 263.66579798830116]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 161
+------------ newPoint: [214.7478677883049, 325.74855881862146]
+Energia local no mejorada con nuevo punto : [214.7478677883049, 325.74855881862146]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 162
+------------ newPoint: [582.7751806436894, 421.67831752208565]
+Energia local no mejorada con nuevo punto : [582.7751806436894, 421.67831752208565]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 163
+------------ newPoint: [578.4842333077183, 227.72258130988922]
+Energia local no mejorada con nuevo punto : [578.4842333077183, 227.72258130988922]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 164
+------------ newPoint: [315.11047616522904, 108.83442856395992]
+Energia local no mejorada con nuevo punto : [315.11047616522904, 108.83442856395992]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 165
+------------ newPoint: [562.6349002034781, 91.62016208861799]
+Energia local no mejorada con nuevo punto : [562.6349002034781, 91.62016208861799]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 166
+------------ newPoint: [76.53645526568558, 243.46709719370486]
+Energia local no mejorada con nuevo punto : [76.53645526568558, 243.46709719370486]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 167
+------------ newPoint: [369.7559630404653, 179.0741122413772]
+Energia local mejorada con nuevo punto : [369.7559630404653, 179.0741122413772]
+------ Subiteracion num: 168
+------------ newPoint: [445.96671315156084, 417.43866598004166]
+Energia local no mejorada con nuevo punto : [445.96671315156084, 417.43866598004166]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 169
+------------ newPoint: [644.355831264657, 309.3525188452324]
+Energia local mejorada con nuevo punto : [644.355831264657, 309.3525188452324]
+------ Subiteracion num: 170
+------------ newPoint: [391.36471208140557, 316.88448991306234]
+Energia local no mejorada con nuevo punto : [391.36471208140557, 316.88448991306234]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 171
+------------ newPoint: [448.62629554620077, 417.16639246127477]
+Energia local no mejorada con nuevo punto : [448.62629554620077, 417.16639246127477]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 172
+------------ newPoint: [633.6754851878413, 132.21292981466974]
+Energia local no mejorada con nuevo punto : [633.6754851878413, 132.21292981466974]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 173
+------------ newPoint: [501.25991435439767, 318.59132712537894]
+Energia local no mejorada con nuevo punto : [501.25991435439767, 318.59132712537894]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 174
+------------ newPoint: [583.3282110927969, 230.05102369849354]
+Energia local no mejorada con nuevo punto : [583.3282110927969, 230.05102369849354]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 175
+------------ newPoint: [630.0757851509067, 223.8572338190387]
+Energia local no mejorada con nuevo punto : [630.0757851509067, 223.8572338190387]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 176
+------------ newPoint: [27.109413249069362, 284.7250526983805]
+Energia local no mejorada con nuevo punto : [27.109413249069362, 284.7250526983805]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 177
+------------ newPoint: [369.6992861856555, 178.9394285969703]
+Energia local mejorada con nuevo punto : [369.6992861856555, 178.9394285969703]
+------ Subiteracion num: 178
+------------ newPoint: [274.3007445190235, 175.8384260660914]
+Energia local no mejorada con nuevo punto : [274.3007445190235, 175.8384260660914]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 179
+------------ newPoint: [46.58055190491059, 428.49667111775216]
+Energia local no mejorada con nuevo punto : [46.58055190491059, 428.49667111775216]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 180
+------------ newPoint: [340.4258274065915, 264.1685885812547]
+Energia local mejorada con nuevo punto : [340.4258274065915, 264.1685885812547]
+------ Subiteracion num: 181
+------------ newPoint: [81.95735711304553, 254.4944290015256]
+Energia local no mejorada con nuevo punto : [81.95735711304553, 254.4944290015256]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 182
+------------ newPoint: [341.92338279490565, 263.32566679407313]
+Energia local no mejorada con nuevo punto : [341.92338279490565, 263.32566679407313]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 183
+------------ newPoint: [500.5015089914376, 355.6234367351669]
+Energia local no mejorada con nuevo punto : [500.5015089914376, 355.6234367351669]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 184
+------------ newPoint: [647.8157215715105, 220.87814424807218]
+Energia local no mejorada con nuevo punto : [647.8157215715105, 220.87814424807218]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 185
+------------ newPoint: [7.130588183603328, 272.41909842463923]
+Energia local no mejorada con nuevo punto : [7.130588183603328, 272.41909842463923]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 186
+------------ newPoint: [640.5836119520416, 129.16665962301877]
+Energia local no mejorada con nuevo punto : [640.5836119520416, 129.16665962301877]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 187
+------------ newPoint: [488.05949566029017, 159.08530017807277]
+Energia local no mejorada con nuevo punto : [488.05949566029017, 159.08530017807277]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 188
+------------ newPoint: [580.6181288743953, 421.70623838448466]
+Energia local mejorada con nuevo punto : [580.6181288743953, 421.70623838448466]
+------ Subiteracion num: 189
+------------ newPoint: [225.91943708430446, 341.4260319173136]
+Energia local no mejorada con nuevo punto : [225.91943708430446, 341.4260319173136]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 190
+------------ newPoint: [10.546588979450851, 344.3989430856212]
+Energia local no mejorada con nuevo punto : [10.546588979450851, 344.3989430856212]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 191
+------------ newPoint: [580.6228537869188, 421.7113785699223]
+Energia local no mejorada con nuevo punto : [580.6228537869188, 421.7113785699223]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 192
+------------ newPoint: [369.1922924426063, 180.18035254271354]
+Energia local no mejorada con nuevo punto : [369.1922924426063, 180.18035254271354]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 193
+------------ newPoint: [84.8667683889757, 238.51829991403596]
+Energia local no mejorada con nuevo punto : [84.8667683889757, 238.51829991403596]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 194
+------------ newPoint: [438.4978264082768, 248.10578137504274]
+Energia local no mejorada con nuevo punto : [438.4978264082768, 248.10578137504274]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 195
+------------ newPoint: [439.00811023722287, 250.97308450462694]
+Energia local no mejorada con nuevo punto : [439.00811023722287, 250.97308450462694]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 196
+------------ newPoint: [99.66696872319608, 149.47117436318973]
+Energia local no mejorada con nuevo punto : [99.66696872319608, 149.47117436318973]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 197
+------------ newPoint: [48.968725737725435, 430.86663363009933]
+Energia local no mejorada con nuevo punto : [48.968725737725435, 430.86663363009933]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 198
+------------ newPoint: [195.2051290719276, 61.83130530318676]
+Energia local no mejorada con nuevo punto : [195.2051290719276, 61.83130530318676]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 199
+------------ newPoint: [42.197890127058336, 8.980632235144112]
+Energia local no mejorada con nuevo punto : [42.197890127058336, 8.980632235144112]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 200
+------------ newPoint: [293.7232125236935, 419.58033966445527]
+Energia local no mejorada con nuevo punto : [293.7232125236935, 419.58033966445527]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 201
+------------ newPoint: [140.59278431943108, 307.4770488377511]
+Energia local no mejorada con nuevo punto : [140.59278431943108, 307.4770488377511]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 202
+------------ newPoint: [173.52075393514676, 396.6172994347908]
+Energia local no mejorada con nuevo punto : [173.52075393514676, 396.6172994347908]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 203
+------------ newPoint: [582.1852221299552, 423.15325092045634]
+Energia local no mejorada con nuevo punto : [582.1852221299552, 423.15325092045634]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 204
+------------ newPoint: [201.6880607949086, 70.35727143970114]
+Energia local no mejorada con nuevo punto : [201.6880607949086, 70.35727143970114]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 205
+------------ newPoint: [226.35664147620113, 332.6365772157556]
+Energia local mejorada con nuevo punto : [226.35664147620113, 332.6365772157556]
+------ Subiteracion num: 206
+------------ newPoint: [525.1429272590153, 376.6391178599276]
+Energia local no mejorada con nuevo punto : [525.1429272590153, 376.6391178599276]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 207
+------------ newPoint: [487.5178124081971, 152.87393093849442]
+Energia local mejorada con nuevo punto : [487.5178124081971, 152.87393093849442]
+------ Subiteracion num: 208
+------------ newPoint: [123.52659876864537, 345.57852062640154]
+Energia local no mejorada con nuevo punto : [123.52659876864537, 345.57852062640154]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 209
+------------ newPoint: [104.48354238128744, 340.81069354085406]
+Energia local mejorada con nuevo punto : [104.48354238128744, 340.81069354085406]
+------ Subiteracion num: 210
+------------ newPoint: [10.736399363149502, 345.3636901695373]
+Energia local no mejorada con nuevo punto : [10.736399363149502, 345.3636901695373]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 211
+------------ newPoint: [169.32336338189853, 400.1328033578678]
+Energia local no mejorada con nuevo punto : [169.32336338189853, 400.1328033578678]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 212
+------------ newPoint: [87.08746821659992, 302.4442534700999]
+Energia local no mejorada con nuevo punto : [87.08746821659992, 302.4442534700999]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 213
+------------ newPoint: [563.3482356980219, 84.54464366018908]
+Energia local mejorada con nuevo punto : [563.3482356980219, 84.54464366018908]
+------ Subiteracion num: 214
+------------ newPoint: [512.1040612981213, 328.8191428470832]
+Energia local mejorada con nuevo punto : [512.1040612981213, 328.8191428470832]
+------ Subiteracion num: 215
+------------ newPoint: [311.88452041595644, 394.2440411139846]
+Energia local no mejorada con nuevo punto : [311.88452041595644, 394.2440411139846]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 216
+------------ newPoint: [7.56121311836574, 344.85407188026755]
+Energia local mejorada con nuevo punto : [7.56121311836574, 344.85407188026755]
+------ Subiteracion num: 217
+------------ newPoint: [106.29566158303665, -34.47662900461737]
+Energia local no mejorada con nuevo punto : [106.29566158303665, -34.47662900461737]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 218
+------------ newPoint: [439.5609834028157, 253.3762756441142]
+Energia local mejorada con nuevo punto : [439.5609834028157, 253.3762756441142]
+------ Subiteracion num: 219
+------------ newPoint: [5.27936269821704, 352.71751392688026]
+Energia local no mejorada con nuevo punto : [5.27936269821704, 352.71751392688026]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 220
+------------ newPoint: [92.11812409324355, 243.42983635529808]
+Energia local mejorada con nuevo punto : [92.11812409324355, 243.42983635529808]
+------ Subiteracion num: 221
+------------ newPoint: [182.80500541991327, 89.83701721656242]
+Energia local no mejorada con nuevo punto : [182.80500541991327, 89.83701721656242]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 222
+------------ newPoint: [576.6669290262582, 232.32707016175954]
+Energia local mejorada con nuevo punto : [576.6669290262582, 232.32707016175954]
+------ Subiteracion num: 223
+------------ newPoint: [11.442144973439643, 342.5793369821507]
+Energia local no mejorada con nuevo punto : [11.442144973439643, 342.5793369821507]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 224
+------------ newPoint: [491.4657215234783, 173.70986939845034]
+Energia local no mejorada con nuevo punto : [491.4657215234783, 173.70986939845034]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 225
+------------ newPoint: [167.42203997840434, 401.24205654295105]
+Energia local no mejorada con nuevo punto : [167.42203997840434, 401.24205654295105]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 226
+------------ newPoint: [340.28090960252626, 264.15000402718215]
+Energia local mejorada con nuevo punto : [340.28090960252626, 264.15000402718215]
+------ Subiteracion num: 227
+------------ newPoint: [460.9082701785777, 187.24713309408844]
+Energia local no mejorada con nuevo punto : [460.9082701785777, 187.24713309408844]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 228
+------------ newPoint: [221.9516074006339, 189.72853572870613]
+Energia local no mejorada con nuevo punto : [221.9516074006339, 189.72853572870613]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 229
+------------ newPoint: [637.2781640506535, 131.98177812969897]
+Energia local no mejorada con nuevo punto : [637.2781640506535, 131.98177812969897]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 230
+------------ newPoint: [493.75405089975345, 135.35143189435544]
+Energia local no mejorada con nuevo punto : [493.75405089975345, 135.35143189435544]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 231
+------------ newPoint: [115.57800976871435, -39.37732644980453]
+Energia local no mejorada con nuevo punto : [115.57800976871435, -39.37732644980453]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 232
+------------ newPoint: [460.91962764553995, 65.8212582314532]
+Energia local no mejorada con nuevo punto : [460.91962764553995, 65.8212582314532]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 233
+------------ newPoint: [114.36897706861102, 153.99064256309208]
+Energia local no mejorada con nuevo punto : [114.36897706861102, 153.99064256309208]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 234
+------------ newPoint: [145.18896524000002, 295.6153179962339]
+Energia local no mejorada con nuevo punto : [145.18896524000002, 295.6153179962339]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 235
+------------ newPoint: [106.89717082686565, -36.99297656814309]
+Energia local no mejorada con nuevo punto : [106.89717082686565, -36.99297656814309]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 236
+------------ newPoint: [340.29706391266143, 264.10454752816935]
+Energia local mejorada con nuevo punto : [340.29706391266143, 264.10454752816935]
+------ Subiteracion num: 237
+------------ newPoint: [20.220159086420043, 283.6599356883646]
+Energia local no mejorada con nuevo punto : [20.220159086420043, 283.6599356883646]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 238
+------------ newPoint: [8.281031083679958, 345.85557820904785]
+Energia local no mejorada con nuevo punto : [8.281031083679958, 345.85557820904785]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 239
+------------ newPoint: [6.3066936860033955, 348.04176406397727]
+Energia local no mejorada con nuevo punto : [6.3066936860033955, 348.04176406397727]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 240
+------------ newPoint: [342.3958107734697, 84.95514508096235]
+Energia local no mejorada con nuevo punto : [342.3958107734697, 84.95514508096235]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 241
+------------ newPoint: [369.82102438508554, 179.4860790166896]
+Energia local no mejorada con nuevo punto : [369.82102438508554, 179.4860790166896]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 242
+------------ newPoint: [227.47323501519202, 339.0353915905778]
+Energia local no mejorada con nuevo punto : [227.47323501519202, 339.0353915905778]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 243
+------------ newPoint: [92.17257366896531, 335.65957007882156]
+Energia local no mejorada con nuevo punto : [92.17257366896531, 335.65957007882156]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 244
+------------ newPoint: [568.4483561493975, 91.61464863251432]
+Energia local no mejorada con nuevo punto : [568.4483561493975, 91.61464863251432]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 245
+------------ newPoint: [628.896452182646, 126.80764333212046]
+Energia local no mejorada con nuevo punto : [628.896452182646, 126.80764333212046]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 246
+------------ newPoint: [160.91202901639824, 406.79356701329795]
+Energia local no mejorada con nuevo punto : [160.91202901639824, 406.79356701329795]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 247
+------------ newPoint: [581.1536055342659, 420.95307977564863]
+Energia local no mejorada con nuevo punto : [581.1536055342659, 420.95307977564863]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 248
+------------ newPoint: [43.44187220509999, 427.6493148660458]
+Energia local no mejorada con nuevo punto : [43.44187220509999, 427.6493148660458]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 249
+------------ newPoint: [340.6369197691678, 264.0548602722415]
+Energia local no mejorada con nuevo punto : [340.6369197691678, 264.0548602722415]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 250
+------------ newPoint: [169.4115196543329, 400.9125562841794]
+Energia local mejorada con nuevo punto : [169.4115196543329, 400.9125562841794]
+------ Subiteracion num: 251
+------------ newPoint: [369.7625966770345, 180.0710706620034]
+Energia local no mejorada con nuevo punto : [369.7625966770345, 180.0710706620034]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 252
+------------ newPoint: [91.4544341147458, 249.32692474306964]
+Energia local mejorada con nuevo punto : [91.4544341147458, 249.32692474306964]
+------ Subiteracion num: 253
+------------ newPoint: [171.06368298723527, 400.7373614275985]
+Energia local mejorada con nuevo punto : [171.06368298723527, 400.7373614275985]
+------ Subiteracion num: 254
+------------ newPoint: [78.30378215799394, 252.07505659920955]
+Energia local no mejorada con nuevo punto : [78.30378215799394, 252.07505659920955]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 255
+------------ newPoint: [45.38660967518829, 214.79116999627152]
+Energia local no mejorada con nuevo punto : [45.38660967518829, 214.79116999627152]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 256
+------------ newPoint: [47.04728216399012, 430.7315883600274]
+Energia local no mejorada con nuevo punto : [47.04728216399012, 430.7315883600274]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 257
+------------ newPoint: [228.77573170849533, 329.13209903331744]
+Energia local no mejorada con nuevo punto : [228.77573170849533, 329.13209903331744]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 258
+------------ newPoint: [170.75049805272846, 397.4497625399357]
+Energia local no mejorada con nuevo punto : [170.75049805272846, 397.4497625399357]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 259
+------------ newPoint: [82.54571066490692, -22.93848248772714]
+Energia local no mejorada con nuevo punto : [82.54571066490692, -22.93848248772714]
+Energia local no mejorada pero aceptada 
+------ Subiteracion num: 260
+------------ newPoint: [565.5487316197986, 87.47451931968473]
+Energia local no mejorada con nuevo punto : [565.5487316197986, 87.47451931968473]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 261
+------------ newPoint: [456.56599444517565, 74.90824773731309]
+Energia local no mejorada con nuevo punto : [456.56599444517565, 74.90824773731309]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 262
+------------ newPoint: [171.03900180123327, 400.71086867547797]
+Energia local no mejorada con nuevo punto : [171.03900180123327, 400.71086867547797]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 263
+------------ newPoint: [49.80952360034741, 428.7632124868429]
+Energia local no mejorada con nuevo punto : [49.80952360034741, 428.7632124868429]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 264
+------------ newPoint: [246.29621423507132, 348.05804360503333]
+Energia local no mejorada con nuevo punto : [246.29621423507132, 348.05804360503333]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 265
+------------ newPoint: [218.3713736085094, 356.6091365008663]
+Energia local no mejorada con nuevo punto : [218.3713736085094, 356.6091365008663]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 266
+------------ newPoint: [291.78915459574733, 102.05110518339097]
+Energia local no mejorada con nuevo punto : [291.78915459574733, 102.05110518339097]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 267
+------------ newPoint: [197.44353602902117, 85.40192897781509]
+Energia local no mejorada con nuevo punto : [197.44353602902117, 85.40192897781509]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 268
+------------ newPoint: [93.87883287412347, 366.91951947083584]
+Energia local no mejorada con nuevo punto : [93.87883287412347, 366.91951947083584]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 269
+------------ newPoint: [49.971968986920714, 431.3684864141263]
+Energia local mejorada con nuevo punto : [49.971968986920714, 431.3684864141263]
+------ Subiteracion num: 270
+------------ newPoint: [461.68853763744414, 45.88199249771738]
+Energia local no mejorada con nuevo punto : [461.68853763744414, 45.88199249771738]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 271
+------------ newPoint: [638.4397856698693, 131.9482111593857]
+Energia local no mejorada con nuevo punto : [638.4397856698693, 131.9482111593857]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 272
+------------ newPoint: [29.275987532510623, 309.37754995193785]
+Energia local no mejorada con nuevo punto : [29.275987532510623, 309.37754995193785]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 273
+------------ newPoint: [46.075579089559085, 230.18745217042112]
+Energia local mejorada con nuevo punto : [46.075579089559085, 230.18745217042112]
+------ Subiteracion num: 274
+------------ newPoint: [92.71208625427542, 122.93764077816054]
+Energia local no mejorada con nuevo punto : [92.71208625427542, 122.93764077816054]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 275
+------------ newPoint: [189.2321839309256, 82.36978582484898]
+Energia local no mejorada con nuevo punto : [189.2321839309256, 82.36978582484898]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 276
+------------ newPoint: [437.6470625223481, 253.69993912590164]
+Energia local no mejorada con nuevo punto : [437.6470625223481, 253.69993912590164]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 277
+------------ newPoint: [649.9270507627783, 212.33496267086124]
+Energia local mejorada con nuevo punto : [649.9270507627783, 212.33496267086124]
+------ Subiteracion num: 278
+------------ newPoint: [43.558025956410916, 220.77878450217625]
+Energia local no mejorada con nuevo punto : [43.558025956410916, 220.77878450217625]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 279
+------------ newPoint: [651.8537657976889, 206.41656417106915]
+Energia local no mejorada con nuevo punto : [651.8537657976889, 206.41656417106915]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 280
+------------ newPoint: [369.70462160374205, 179.22037853289214]
+Energia local no mejorada con nuevo punto : [369.70462160374205, 179.22037853289214]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 281
+------------ newPoint: [638.8509964148835, 127.8871106291483]
+Energia local mejorada con nuevo punto : [638.8509964148835, 127.8871106291483]
+------ Subiteracion num: 282
+------------ newPoint: [19.859088780319464, 287.10642256503]
+Energia local mejorada con nuevo punto : [19.859088780319464, 287.10642256503]
+------ Subiteracion num: 283
+------------ newPoint: [21.99073611794551, 283.8136342045692]
+Energia local no mejorada con nuevo punto : [21.99073611794551, 283.8136342045692]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 284
+------------ newPoint: [50.219214356233785, 430.4018609907548]
+Energia local no mejorada con nuevo punto : [50.219214356233785, 430.4018609907548]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 285
+------------ newPoint: [576.6720606811762, 232.1133748241336]
+Energia local no mejorada con nuevo punto : [576.6720606811762, 232.1133748241336]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 286
+------------ newPoint: [118.55137301397707, 350.11597535960243]
+Energia local no mejorada con nuevo punto : [118.55137301397707, 350.11597535960243]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 287
+------------ newPoint: [467.6963544632432, 178.36736259063235]
+Energia local no mejorada con nuevo punto : [467.6963544632432, 178.36736259063235]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 288
+------------ newPoint: [290.09885585073874, 373.74730727005374]
+Energia local no mejorada con nuevo punto : [290.09885585073874, 373.74730727005374]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 289
+------------ newPoint: [633.2637745127226, 135.85837604459624]
+Energia local no mejorada con nuevo punto : [633.2637745127226, 135.85837604459624]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 290
+------------ newPoint: [643.8495748334536, 313.16852923207085]
+Energia local no mejorada con nuevo punto : [643.8495748334536, 313.16852923207085]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 291
+------------ newPoint: [447.2291111312875, 421.1835991716728]
+Energia local no mejorada con nuevo punto : [447.2291111312875, 421.1835991716728]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 292
+------------ newPoint: [300.2090820121993, 138.4413598206039]
+Energia local no mejorada con nuevo punto : [300.2090820121993, 138.4413598206039]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 293
+------------ newPoint: [2.88966844296856, 278.18839260829265]
+Energia local mejorada con nuevo punto : [2.88966844296856, 278.18839260829265]
+------ Subiteracion num: 294
+------------ newPoint: [632.4246780896407, 127.0614264665203]
+Energia local no mejorada con nuevo punto : [632.4246780896407, 127.0614264665203]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 295
+------------ newPoint: [448.46906559113006, 417.1705529262734]
+Energia local no mejorada con nuevo punto : [448.46906559113006, 417.1705529262734]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 296
+------------ newPoint: [58.61712758872741, 240.95898770210704]
+Energia local no mejorada con nuevo punto : [58.61712758872741, 240.95898770210704]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 297
+------------ newPoint: [117.32300351596508, 329.0022136264063]
+Energia local no mejorada con nuevo punto : [117.32300351596508, 329.0022136264063]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 298
+------------ newPoint: [577.1256408820313, 228.24027958267249]
+Energia local no mejorada con nuevo punto : [577.1256408820313, 228.24027958267249]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 299
+------------ newPoint: [50.86160742786357, 227.76709623093595]
+Energia local no mejorada con nuevo punto : [50.86160742786357, 227.76709623093595]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 300
+------------ newPoint: [168.90641775932465, 399.74714753718376]
+Energia local no mejorada con nuevo punto : [168.90641775932465, 399.74714753718376]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 301
+------------ newPoint: [446.1352291518501, 419.8125906952018]
+Energia local no mejorada con nuevo punto : [446.1352291518501, 419.8125906952018]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 302
+------------ newPoint: [448.87212173595543, 418.04561341217254]
+Energia local no mejorada con nuevo punto : [448.87212173595543, 418.04561341217254]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 303
+------------ newPoint: [438.4028415055462, 248.4648238059888]
+Energia local no mejorada con nuevo punto : [438.4028415055462, 248.4648238059888]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 304
+------------ newPoint: [436.099929842007, 251.23767928082]
+Energia local no mejorada con nuevo punto : [436.099929842007, 251.23767928082]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 305
+------------ newPoint: [235.62892831007304, 187.93609924546024]
+Energia local mejorada con nuevo punto : [235.62892831007304, 187.93609924546024]
+------ Subiteracion num: 306
+------------ newPoint: [450.0021512320293, 417.6347621790911]
+Energia local no mejorada con nuevo punto : [450.0021512320293, 417.6347621790911]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 307
+------------ newPoint: [392.3312311613995, 316.69663295374363]
+Energia local no mejorada con nuevo punto : [392.3312311613995, 316.69663295374363]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 308
+------------ newPoint: [634.9524950233603, 134.54021703033507]
+Energia local no mejorada con nuevo punto : [634.9524950233603, 134.54021703033507]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 309
+------------ newPoint: [7.255871368585179, 272.042765504818]
+Energia local no mejorada con nuevo punto : [7.255871368585179, 272.042765504818]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 310
+------------ newPoint: [349.3950050501902, 85.85122384200432]
+Energia local no mejorada con nuevo punto : [349.3950050501902, 85.85122384200432]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 311
+------------ newPoint: [53.79632696087795, 228.2894116608607]
+Energia local no mejorada con nuevo punto : [53.79632696087795, 228.2894116608607]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 312
+------------ newPoint: [639.3454655472688, 128.4501755682243]
+Energia local mejorada con nuevo punto : [639.3454655472688, 128.4501755682243]
+------ Subiteracion num: 313
+------------ newPoint: [171.23074855428868, 400.8333899922051]
+Energia local mejorada con nuevo punto : [171.23074855428868, 400.8333899922051]
+------ Subiteracion num: 314
+------------ newPoint: [370.5290153109434, 67.40458473854292]
+Energia local no mejorada con nuevo punto : [370.5290153109434, 67.40458473854292]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 315
+------------ newPoint: [369.67064925161014, 178.8591811283004]
+Energia local mejorada con nuevo punto : [369.67064925161014, 178.8591811283004]
+------ Subiteracion num: 316
+------------ newPoint: [340.56809281421715, 264.20515944477484]
+Energia local no mejorada con nuevo punto : [340.56809281421715, 264.20515944477484]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 317
+------------ newPoint: [118.28260129995938, 133.4877488530206]
+Energia local no mejorada con nuevo punto : [118.28260129995938, 133.4877488530206]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 318
+------------ newPoint: [633.1228626536939, 219.52138851826058]
+Energia local no mejorada con nuevo punto : [633.1228626536939, 219.52138851826058]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 319
+------------ newPoint: [639.647854377961, 129.58542538657602]
+Energia local no mejorada con nuevo punto : [639.647854377961, 129.58542538657602]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 320
+------------ newPoint: [636.648679380005, 130.8328461064636]
+Energia local no mejorada con nuevo punto : [636.648679380005, 130.8328461064636]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 321
+------------ newPoint: [524.0215079890703, 146.34074810453217]
+Energia local no mejorada con nuevo punto : [524.0215079890703, 146.34074810453217]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 322
+------------ newPoint: [581.1846189437094, 424.47120663527096]
+Energia local no mejorada con nuevo punto : [581.1846189437094, 424.47120663527096]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 323
+------------ newPoint: [49.822655023357385, 233.4198732096981]
+Energia local no mejorada con nuevo punto : [49.822655023357385, 233.4198732096981]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 324
+------------ newPoint: [48.712167340086765, 429.63437815226445]
+Energia local no mejorada con nuevo punto : [48.712167340086765, 429.63437815226445]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 325
+------------ newPoint: [581.3587492574527, 426.17177660262706]
+Energia local no mejorada con nuevo punto : [581.3587492574527, 426.17177660262706]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 326
+------------ newPoint: [136.2648197799247, 93.09869581789084]
+Energia local no mejorada con nuevo punto : [136.2648197799247, 93.09869581789084]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 327
+------------ newPoint: [104.85425543275323, 123.32770972400151]
+Energia local no mejorada con nuevo punto : [104.85425543275323, 123.32770972400151]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 328
+------------ newPoint: [9.141824892997377, 289.2668141752125]
+Energia local mejorada con nuevo punto : [9.141824892997377, 289.2668141752125]
+------ Subiteracion num: 329
+------------ newPoint: [78.02808847991578, 254.87642933102245]
+Energia local no mejorada con nuevo punto : [78.02808847991578, 254.87642933102245]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 330
+------------ newPoint: [592.4213531276107, 228.77377398003117]
+Energia local no mejorada con nuevo punto : [592.4213531276107, 228.77377398003117]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 331
+------------ newPoint: [8.9001970809827, 283.45463516603326]
+Energia local mejorada con nuevo punto : [8.9001970809827, 283.45463516603326]
+------ Subiteracion num: 332
+------------ newPoint: [369.8153876906462, 180.16028496853238]
+Energia local no mejorada con nuevo punto : [369.8153876906462, 180.16028496853238]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 333
+------------ newPoint: [305.494505852291, 404.3918181314233]
+Energia local mejorada con nuevo punto : [305.494505852291, 404.3918181314233]
+------ Subiteracion num: 334
+------------ newPoint: [22.658769699626077, 228.4345302728654]
+Energia local no mejorada con nuevo punto : [22.658769699626077, 228.4345302728654]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 335
+------------ newPoint: [640.4961483079652, 314.21868704338874]
+Energia local no mejorada con nuevo punto : [640.4961483079652, 314.21868704338874]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 336
+------------ newPoint: [649.7270909705741, 212.37069528593702]
+Energia local mejorada con nuevo punto : [649.7270909705741, 212.37069528593702]
+------ Subiteracion num: 337
+------------ newPoint: [231.08026382255497, 333.060695779674]
+Energia local no mejorada con nuevo punto : [231.08026382255497, 333.060695779674]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 338
+------------ newPoint: [44.41501290721176, 428.3861315907899]
+Energia local no mejorada con nuevo punto : [44.41501290721176, 428.3861315907899]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 339
+------------ newPoint: [651.6582109308283, 216.9763899166183]
+Energia local mejorada con nuevo punto : [651.6582109308283, 216.9763899166183]
+------ Subiteracion num: 340
+------------ newPoint: [59.78379376283233, 430.73191495057966]
+Energia local no mejorada con nuevo punto : [59.78379376283233, 430.73191495057966]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 341
+------------ newPoint: [107.44663050070214, -33.522022181548934]
+Energia local mejorada con nuevo punto : [107.44663050070214, -33.522022181548934]
+------ Subiteracion num: 342
+------------ newPoint: [227.93486403768273, 346.29267867773507]
+Energia local no mejorada con nuevo punto : [227.93486403768273, 346.29267867773507]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 343
+------------ newPoint: [489.893553278098, 139.940891812494]
+Energia local no mejorada con nuevo punto : [489.893553278098, 139.940891812494]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 344
+------------ newPoint: [109.83786072113756, -32.8295328081991]
+Energia local no mejorada con nuevo punto : [109.83786072113756, -32.8295328081991]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 345
+------------ newPoint: [648.0228274330299, 216.10854017497056]
+Energia local mejorada con nuevo punto : [648.0228274330299, 216.10854017497056]
+------ Subiteracion num: 346
+------------ newPoint: [524.033040665159, 344.4942854591487]
+Energia local no mejorada con nuevo punto : [524.033040665159, 344.4942854591487]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 347
+------------ newPoint: [439.62777471471986, 253.2340014291483]
+Energia local no mejorada con nuevo punto : [439.62777471471986, 253.2340014291483]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 348
+------------ newPoint: [439.8594650311417, 252.8078378783946]
+Energia local no mejorada con nuevo punto : [439.8594650311417, 252.8078378783946]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 349
+------------ newPoint: [91.64867941616131, 340.08286527628877]
+Energia local no mejorada con nuevo punto : [91.64867941616131, 340.08286527628877]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 350
+------------ newPoint: [583.7835710340223, 230.6625568324251]
+Energia local no mejorada con nuevo punto : [583.7835710340223, 230.6625568324251]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 351
+------------ newPoint: [46.14364310866877, 431.5966379317668]
+Energia local mejorada con nuevo punto : [46.14364310866877, 431.5966379317668]
+------ Subiteracion num: 352
+------------ newPoint: [597.7986992806775, 228.48918676088667]
+Energia local no mejorada con nuevo punto : [597.7986992806775, 228.48918676088667]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 353
+------------ newPoint: [391.65158404794477, 316.6587281349879]
+Energia local no mejorada con nuevo punto : [391.65158404794477, 316.6587281349879]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 354
+------------ newPoint: [177.25711208254899, 398.2018996970112]
+Energia local mejorada con nuevo punto : [177.25711208254899, 398.2018996970112]
+------ Subiteracion num: 355
+------------ newPoint: [109.38799726725016, -19.624376882251433]
+Energia local no mejorada con nuevo punto : [109.38799726725016, -19.624376882251433]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 356
+------------ newPoint: [287.7414783817483, 87.1149592557119]
+Energia local no mejorada con nuevo punto : [287.7414783817483, 87.1149592557119]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 357
+------------ newPoint: [369.50865614971116, 178.80217312978536]
+Energia local mejorada con nuevo punto : [369.50865614971116, 178.80217312978536]
+------ Subiteracion num: 358
+------------ newPoint: [590.0379742128057, 222.24714761965382]
+Energia local no mejorada con nuevo punto : [590.0379742128057, 222.24714761965382]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 359
+------------ newPoint: [369.93610045985275, 179.55113130403083]
+Energia local no mejorada con nuevo punto : [369.93610045985275, 179.55113130403083]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 360
+------------ newPoint: [415.9782248497771, 100.06707209101877]
+Energia local no mejorada con nuevo punto : [415.9782248497771, 100.06707209101877]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 361
+------------ newPoint: [447.0956317155309, 418.1563230834289]
+Energia local no mejorada con nuevo punto : [447.0956317155309, 418.1563230834289]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 362
+------------ newPoint: [637.4291055423403, 127.72575473983618]
+Energia local no mejorada con nuevo punto : [637.4291055423403, 127.72575473983618]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 363
+------------ newPoint: [47.121250474551864, 428.06179785493697]
+Energia local no mejorada con nuevo punto : [47.121250474551864, 428.06179785493697]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 364
+------------ newPoint: [356.91141071279174, 111.4964556467612]
+Energia local no mejorada con nuevo punto : [356.91141071279174, 111.4964556467612]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 365
+------------ newPoint: [20.343645050934228, 294.1234846359182]
+Energia local no mejorada con nuevo punto : [20.343645050934228, 294.1234846359182]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 366
+------------ newPoint: [203.4230812534685, 63.338527777205826]
+Energia local mejorada con nuevo punto : [203.4230812534685, 63.338527777205826]
+------ Subiteracion num: 367
+------------ newPoint: [18.496932742241924, 286.20892701839836]
+Energia local no mejorada con nuevo punto : [18.496932742241924, 286.20892701839836]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 368
+------------ newPoint: [176.6356804762409, 396.5913686158317]
+Energia local no mejorada con nuevo punto : [176.6356804762409, 396.5913686158317]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 369
+------------ newPoint: [438.6336994481251, 251.31279724795013]
+Energia local no mejorada con nuevo punto : [438.6336994481251, 251.31279724795013]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 370
+------------ newPoint: [215.07397898886327, 343.85188947550296]
+Energia local no mejorada con nuevo punto : [215.07397898886327, 343.85188947550296]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 371
+------------ newPoint: [45.33597672845867, 431.35409667869806]
+Energia local mejorada con nuevo punto : [45.33597672845867, 431.35409667869806]
+------ Subiteracion num: 372
+------------ newPoint: [509.1563172290835, 319.15994673219177]
+Energia local no mejorada con nuevo punto : [509.1563172290835, 319.15994673219177]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 373
+------------ newPoint: [57.18701788429144, 13.32430772885964]
+Energia local no mejorada con nuevo punto : [57.18701788429144, 13.32430772885964]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 374
+------------ newPoint: [639.7786651202226, 211.53019407654006]
+Energia local no mejorada con nuevo punto : [639.7786651202226, 211.53019407654006]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 375
+------------ newPoint: [44.07846402048028, 427.9855097236821]
+Energia local no mejorada con nuevo punto : [44.07846402048028, 427.9855097236821]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 376
+------------ newPoint: [103.76791423146327, -30.127942922215407]
+Energia local no mejorada con nuevo punto : [103.76791423146327, -30.127942922215407]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 377
+------------ newPoint: [5.986696125409911, 349.48722128738643]
+Energia local mejorada con nuevo punto : [5.986696125409911, 349.48722128738643]
+------ Subiteracion num: 378
+------------ newPoint: [195.41233924149125, 59.61877424365358]
+Energia local no mejorada con nuevo punto : [195.41233924149125, 59.61877424365358]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 379
+------------ newPoint: [451.31388643159653, 39.21992981304133]
+Energia local no mejorada con nuevo punto : [451.31388643159653, 39.21992981304133]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 380
+------------ newPoint: [177.09117432445586, 398.13125091688175]
+Energia local no mejorada con nuevo punto : [177.09117432445586, 398.13125091688175]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 381
+------------ newPoint: [51.26824716985565, 206.3839981320197]
+Energia local no mejorada con nuevo punto : [51.26824716985565, 206.3839981320197]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 382
+------------ newPoint: [84.81226779090915, 247.9889538944813]
+Energia local no mejorada con nuevo punto : [84.81226779090915, 247.9889538944813]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 383
+------------ newPoint: [641.9800258147138, 218.25669655285094]
+Energia local no mejorada con nuevo punto : [641.9800258147138, 218.25669655285094]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 384
+------------ newPoint: [201.23281459763808, 64.5934245708295]
+Energia local mejorada con nuevo punto : [201.23281459763808, 64.5934245708295]
+------ Subiteracion num: 385
+------------ newPoint: [12.636971610798637, 287.0914114657487]
+Energia local no mejorada con nuevo punto : [12.636971610798637, 287.0914114657487]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 386
+------------ newPoint: [577.8117624167057, 236.6367461960754]
+Energia local no mejorada con nuevo punto : [577.8117624167057, 236.6367461960754]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 387
+------------ newPoint: [342.0400036862875, 263.7573018238683]
+Energia local no mejorada con nuevo punto : [342.0400036862875, 263.7573018238683]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 388
+------------ newPoint: [45.54821012031469, 430.5097782450168]
+Energia local no mejorada con nuevo punto : [45.54821012031469, 430.5097782450168]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 389
+------------ newPoint: [446.57464458170506, 417.80813428659644]
+Energia local no mejorada con nuevo punto : [446.57464458170506, 417.80813428659644]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 390
+------------ newPoint: [391.32957994887346, 316.24630461722455]
+Energia local no mejorada con nuevo punto : [391.32957994887346, 316.24630461722455]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 391
+------------ newPoint: [177.23854398460443, 396.75729306135685]
+Energia local no mejorada con nuevo punto : [177.23854398460443, 396.75729306135685]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 392
+------------ newPoint: [393.3527914096388, 51.243275226915934]
+Energia local no mejorada con nuevo punto : [393.3527914096388, 51.243275226915934]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 393
+------------ newPoint: [46.37180472274863, 230.34742182123279]
+Energia local no mejorada con nuevo punto : [46.37180472274863, 230.34742182123279]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 394
+------------ newPoint: [215.0605474314907, 310.1644825001165]
+Energia local no mejorada con nuevo punto : [215.0605474314907, 310.1644825001165]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 395
+------------ newPoint: [581.0866837834906, 423.0498276540342]
+Energia local no mejorada con nuevo punto : [581.0866837834906, 423.0498276540342]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 396
+------------ newPoint: [652.2559339676723, 216.5340024814222]
+Energia local no mejorada con nuevo punto : [652.2559339676723, 216.5340024814222]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 397
+------------ newPoint: [306.8404015087769, 401.70678296373023]
+Energia local no mejorada con nuevo punto : [306.8404015087769, 401.70678296373023]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 398
+------------ newPoint: [52.82983844136399, 7.296051431520038]
+Energia local no mejorada con nuevo punto : [52.82983844136399, 7.296051431520038]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 399
+------------ newPoint: [233.1192503990113, 165.80915131763254]
+Energia local no mejorada con nuevo punto : [233.1192503990113, 165.80915131763254]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 400
+------------ newPoint: [600.6814206080929, 238.57776808805312]
+Energia local no mejorada con nuevo punto : [600.6814206080929, 238.57776808805312]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 401
+------------ newPoint: [82.11135856950916, 248.48152157643693]
+Energia local no mejorada con nuevo punto : [82.11135856950916, 248.48152157643693]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 402
+------------ newPoint: [485.52998321320587, 153.9548957999239]
+Energia local no mejorada con nuevo punto : [485.52998321320587, 153.9548957999239]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 403
+------------ newPoint: [391.1288115971262, 316.95223020623996]
+Energia local mejorada con nuevo punto : [391.1288115971262, 316.95223020623996]
+------ Subiteracion num: 404
+------------ newPoint: [651.2764720424212, 220.45109725330616]
+Energia local no mejorada con nuevo punto : [651.2764720424212, 220.45109725330616]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 405
+------------ newPoint: [44.08715489009916, 430.6403803853259]
+Energia local mejorada con nuevo punto : [44.08715489009916, 430.6403803853259]
+------ Subiteracion num: 406
+------------ newPoint: [443.8529334485732, 253.30819079816553]
+Energia local no mejorada con nuevo punto : [443.8529334485732, 253.30819079816553]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 407
+------------ newPoint: [300.04699778397503, 410.67401594564546]
+Energia local mejorada con nuevo punto : [300.04699778397503, 410.67401594564546]
+------ Subiteracion num: 408
+------------ newPoint: [84.6747550289712, -37.1721563043729]
+Energia local no mejorada con nuevo punto : [84.6747550289712, -37.1721563043729]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 409
+------------ newPoint: [480.6577941780515, 34.82103202400463]
+Energia local no mejorada con nuevo punto : [480.6577941780515, 34.82103202400463]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 410
+------------ newPoint: [249.38325826146388, 207.90951430344253]
+Energia local no mejorada con nuevo punto : [249.38325826146388, 207.90951430344253]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 411
+------------ newPoint: [87.97449068939477, 240.21082855078546]
+Energia local no mejorada con nuevo punto : [87.97449068939477, 240.21082855078546]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 412
+------------ newPoint: [620.5852070847503, 231.90236366250818]
+Energia local no mejorada con nuevo punto : [620.5852070847503, 231.90236366250818]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 413
+------------ newPoint: [487.68725260881007, 154.02357485229953]
+Energia local no mejorada con nuevo punto : [487.68725260881007, 154.02357485229953]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 414
+------------ newPoint: [341.78872914787337, 263.6037364732677]
+Energia local no mejorada con nuevo punto : [341.78872914787337, 263.6037364732677]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 415
+------------ newPoint: [369.5595485857883, 178.64673374057054]
+Energia local mejorada con nuevo punto : [369.5595485857883, 178.64673374057054]
+------ Subiteracion num: 416
+------------ newPoint: [391.2381942988034, 317.6786425490569]
+Energia local no mejorada con nuevo punto : [391.2381942988034, 317.6786425490569]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 417
+------------ newPoint: [642.9001956309205, 308.73503243493474]
+Energia local no mejorada con nuevo punto : [642.9001956309205, 308.73503243493474]
+Energia local no mejorada, tampoco aceptada 
+Temperatura del sistema: 0.08194183413425785
+Iteracion: 1
+--- Total subiteraciones NR: 39.60521983155796
+--- Total subiteraciones R: 41
+------ Subiteracion num: 0
+------------ newPoint: [7.666122650649063, 271.25653580643444]
+Energia local no mejorada con nuevo punto : [7.666122650649063, 271.25653580643444]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 1
+------------ newPoint: [463.90970400200194, 148.63268183408488]
+Energia local no mejorada con nuevo punto : [463.90970400200194, 148.63268183408488]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 2
+------------ newPoint: [392.1107965331559, 316.3742213336437]
+Energia local no mejorada con nuevo punto : [392.1107965331559, 316.3742213336437]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 3
+------------ newPoint: [644.462668582791, 309.2824214570869]
+Energia local no mejorada con nuevo punto : [644.462668582791, 309.2824214570869]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 4
+------------ newPoint: [85.13999676241954, 360.5431812806309]
+Energia local no mejorada con nuevo punto : [85.13999676241954, 360.5431812806309]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 5
+------------ newPoint: [29.26073400730316, 27.39268099429426]
+Energia local no mejorada con nuevo punto : [29.26073400730316, 27.39268099429426]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 6
+------------ newPoint: [6.463275623882668, 347.3938051154999]
+Energia local no mejorada con nuevo punto : [6.463275623882668, 347.3938051154999]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 7
+------------ newPoint: [519.077089163555, 356.6568283803557]
+Energia local no mejorada con nuevo punto : [519.077089163555, 356.6568283803557]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 8
+------------ newPoint: [177.51194492769508, 397.95274693551505]
+Energia local no mejorada con nuevo punto : [177.51194492769508, 397.95274693551505]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 9
+------------ newPoint: [295.4891781710265, 56.32882935844241]
+Energia local no mejorada con nuevo punto : [295.4891781710265, 56.32882935844241]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 10
+------------ newPoint: [177.14410775926697, 397.80193661560173]
+Energia local no mejorada con nuevo punto : [177.14410775926697, 397.80193661560173]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 11
+------------ newPoint: [592.4379173064247, 234.189132531846]
+Energia local no mejorada con nuevo punto : [592.4379173064247, 234.189132531846]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 12
+------------ newPoint: [438.01397667146324, 42.08106317767699]
+Energia local no mejorada con nuevo punto : [438.01397667146324, 42.08106317767699]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 13
+------------ newPoint: [643.6778298951212, 308.46576858443456]
+Energia local no mejorada con nuevo punto : [643.6778298951212, 308.46576858443456]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 14
+------------ newPoint: [564.0705993385816, 86.6089464532981]
+Energia local no mejorada con nuevo punto : [564.0705993385816, 86.6089464532981]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 15
+------------ newPoint: [645.8657867046196, 310.9663455381156]
+Energia local mejorada con nuevo punto : [645.8657867046196, 310.9663455381156]
+------ Subiteracion num: 16
+------------ newPoint: [369.9451063210372, 179.95473224006145]
+Energia local no mejorada con nuevo punto : [369.9451063210372, 179.95473224006145]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 17
+------------ newPoint: [215.78784796136964, 74.00959526303535]
+Energia local no mejorada con nuevo punto : [215.78784796136964, 74.00959526303535]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 18
+------------ newPoint: [113.53135382290756, -40.811525340192496]
+Energia local mejorada con nuevo punto : [113.53135382290756, -40.811525340192496]
+------ Subiteracion num: 19
+------------ newPoint: [340.375532190155, 263.9162073110895]
+Energia local no mejorada con nuevo punto : [340.375532190155, 263.9162073110895]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 20
+------------ newPoint: [645.1859438706402, 307.55605878852793]
+Energia local no mejorada con nuevo punto : [645.1859438706402, 307.55605878852793]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 21
+------------ newPoint: [629.4873718510368, 214.99336275358024]
+Energia local no mejorada con nuevo punto : [629.4873718510368, 214.99336275358024]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 22
+------------ newPoint: [466.00054640529794, 132.15705215263188]
+Energia local no mejorada con nuevo punto : [466.00054640529794, 132.15705215263188]
+Energia local no mejorada pero aceptada 
+------ Subiteracion num: 23
+------------ newPoint: [7.557087035041829, 350.6765998115703]
+Energia local no mejorada con nuevo punto : [7.557087035041829, 350.6765998115703]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 24
+------------ newPoint: [504.26575382311404, 359.7496747274509]
+Energia local no mejorada con nuevo punto : [504.26575382311404, 359.7496747274509]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 25
+------------ newPoint: [176.8840405412992, 397.2519943248738]
+Energia local no mejorada con nuevo punto : [176.8840405412992, 397.2519943248738]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 26
+------------ newPoint: [341.6480354087234, 263.0683229761165]
+Energia local no mejorada con nuevo punto : [341.6480354087234, 263.0683229761165]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 27
+------------ newPoint: [85.65770443613431, 248.89028631197084]
+Energia local no mejorada con nuevo punto : [85.65770443613431, 248.89028631197084]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 28
+------------ newPoint: [579.7414716178289, 420.5824257415153]
+Energia local no mejorada con nuevo punto : [579.7414716178289, 420.5824257415153]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 29
+------------ newPoint: [622.6423818195491, 226.64357237785734]
+Energia local no mejorada con nuevo punto : [622.6423818195491, 226.64357237785734]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 30
+------------ newPoint: [115.14684549317123, -40.882690564568534]
+Energia local no mejorada con nuevo punto : [115.14684549317123, -40.882690564568534]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 31
+------------ newPoint: [314.6713397285662, 406.8427196526073]
+Energia local no mejorada con nuevo punto : [314.6713397285662, 406.8427196526073]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 32
+------------ newPoint: [207.75311490515782, 164.71039207883575]
+Energia local no mejorada con nuevo punto : [207.75311490515782, 164.71039207883575]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 33
+------------ newPoint: [323.72920138758815, 364.71853762693667]
+Energia local no mejorada con nuevo punto : [323.72920138758815, 364.71853762693667]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 34
+------------ newPoint: [225.79255423558885, 334.33211852800923]
+Energia local mejorada con nuevo punto : [225.79255423558885, 334.33211852800923]
+------ Subiteracion num: 35
+------------ newPoint: [89.6917470273033, 242.78816336619602]
+Energia local no mejorada con nuevo punto : [89.6917470273033, 242.78816336619602]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 36
+------------ newPoint: [450.22590379355563, 417.1351239314324]
+Energia local no mejorada con nuevo punto : [450.22590379355563, 417.1351239314324]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 37
+------------ newPoint: [22.790240022368515, 299.2318559112002]
+Energia local no mejorada con nuevo punto : [22.790240022368515, 299.2318559112002]
+Energia local no mejorada pero aceptada 
+------ Subiteracion num: 38
+------------ newPoint: [176.35363751664025, 393.3225008176748]
+Energia local no mejorada con nuevo punto : [176.35363751664025, 393.3225008176748]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 39
+------------ newPoint: [639.7737853059274, 307.40939224423494]
+Energia local no mejorada con nuevo punto : [639.7737853059274, 307.40939224423494]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 40
+------------ newPoint: [563.2435577474291, 87.78890584251606]
+Energia local no mejorada con nuevo punto : [563.2435577474291, 87.78890584251606]
+Energia local no mejorada, tampoco aceptada 
+Temperatura del sistema: 0.007784474242754496
+Iteracion: 2
+--- Total subiteraciones NR: 3.7624958839980063
+--- Total subiteraciones R: 5
+------ Subiteracion num: 0
+------------ newPoint: [390.85367020220247, 317.12431911912836]
+Energia local no mejorada con nuevo punto : [390.85367020220247, 317.12431911912836]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 1
+------------ newPoint: [439.82350181796147, 253.68757495685924]
+Energia local mejorada con nuevo punto : [439.82350181796147, 253.68757495685924]
+------ Subiteracion num: 2
+------------ newPoint: [562.3541426498272, 84.8205747365315]
+Energia local no mejorada con nuevo punto : [562.3541426498272, 84.8205747365315]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 3
+------------ newPoint: [175.95925960943217, 397.4867145321508]
+Energia local no mejorada con nuevo punto : [175.95925960943217, 397.4867145321508]
+Energia local no mejorada, tampoco aceptada 
+------ Subiteracion num: 4
+------------ newPoint: [214.19107369606547, 161.86767906544551]
+Energia local no mejorada con nuevo punto : [214.19107369606547, 161.86767906544551]
+Energia local no mejorada, tampoco aceptada 
