@@ -28,7 +28,7 @@ def process_args():
 
 def meanData(csvPath):
 
-    colnames = ["relationship","method","colourDistribution","static","l","r","maxExecsPS","result","time"]
+    colnames = ["relationship","method","colourDistribution","static","l","r","maxExecsPS","result","p_acc","p_den","time"]
     data = pandas.read_csv(csvPath+'result.csv', names=colnames)
 
     l_set = list(set(data.l.tolist()[1:]))
@@ -49,6 +49,8 @@ def meanData(csvPath):
 
             accResults = 0
             accTime = 0
+            acc_p_acc = 0
+            acc_p_den = 0
             cont = 0
 
             for row in reader:
@@ -56,6 +58,8 @@ def meanData(csvPath):
               r = float(row['r'])
               l = float(row['l'])
               result = float(row['result'])
+              p_acc = float(row['p_acc'])
+              p_den = float(row['p_den'])
               time = float(row['time'])
 
               check_execs = (int(execPS_i)==execPS)
@@ -71,18 +75,25 @@ def meanData(csvPath):
                 #print("\t\t\t\t IN")
                 accResults+=result
                 accTime+=time
+                acc_p_acc+=p_acc
+                acc_p_den+=p_den
                 cont+=1
 
               #print("\t\t\t"+"-----------------------------------------------")
 
+            if cont == 0:
+              cont = 1
+
             print("\t\t\tmean of results: " + str(accResults/cont) + " (sD)")
             print("\t\t\tmean time: " + str(datetime.timedelta(seconds=accTime/cont)) + " (hh/mm/ss)")
+            print("\t\t\tmean acc/den: " + str(acc_p_acc/cont) + " (%) / " + str(acc_p_den/cont) + " (%)")
             print("\t\t\tn: " + str(cont) )
-            res=[execPS_i,r_i,l_i,str(accResults/cont),str(datetime.timedelta(seconds=accTime/cont)),str(cont)]
+            res=[execPS_i,r_i,l_i,str(accResults/cont),str(datetime.timedelta(seconds=accTime/cont)),str(acc_p_acc/cont),str(acc_p_den/cont),str(cont)]
             to_save.append(res)
             #print(res)
 
-    os.remove(csvPath+'result_resume.csv')
+    if os.path.exists(csvPath+'result_resume.csv'):
+      os.remove(csvPath+'result_resume.csv')
 
     with open(csvPath+'result_resume.csv','a') as f:
           fnames = ['PS','r','l','result','time','n']
