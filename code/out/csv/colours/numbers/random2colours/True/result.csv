@@ -1,5 +1,1 @@
-relationship,method,colourDistribution,static,l,r,maxExecsPS,result,time
-colours,numbers,random2colours,True,0.06,0.095,3,0.06928528937171544,148.92230105400085
-colours,numbers,random2colours,True,0.06,0.095,3,0.06928528937171544,148.92230105400085
-colours,numbers,random2colours,True,0.06,0.15,3,0.06928528937171544,141.05452036857605
-colours,numbers,random2colours,True,0.06,0.15,3,0.06928528937171544,138.70333123207092
+relationship,method,colourDistribution,static,l,r,maxExecsPS,result,timecolours,numbers,random2colours,True,0.06,0.095,3,0.06928528937171544,24.94961977005005
