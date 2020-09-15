@@ -43,29 +43,29 @@ def execute(dcel_i, polygons_i, l, r, maxExecs, minR, maxR, relationship, method
         bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealing.simulatedAnnealing(dcel, r, tIni, tFin, l, n, minR, maxR)
     elif (relationship == "peers"):
         if (method == "and"):
-            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealingPeers.simulatedAnnealingPeers_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "or"):
-            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealingPeers.simulatedAnnealingPeers_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "numbers"):
-            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingPeers.simulatedAnnealingPeers_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealingPeers.simulatedAnnealingPeers_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         else:
             print("error_peers")
     elif (relationship == "groups"):
         if (method == "and"):
-            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealingGroups.simulatedAnnealingGroups_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "or"):
-            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealingGroups.simulatedAnnealingGroups_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         elif (method == "numbers"):
-            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingGroups.simulatedAnnealingGroups_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
+            bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealingGroups.simulatedAnnealingGroups_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR)
         else:
             print("error_groups")
     elif (relationship == "colours"):
         if (method == "and"):
-            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
+            bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealingColours.simulatedAnnealingColours_AndMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
         elif (method == "or"):
-            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
+            bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealingColours.simulatedAnnealingColours_OrMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
         elif (method == "numbers"):
-            bestPSet, bestSD, bestsDs, sDs, temps, its = simulatedAnnealingColours.simulatedAnnealingColours_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
+            bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = simulatedAnnealingColours.simulatedAnnealingColours_NumbersMethod(dcel, r, tIni, tFin, l, n, minR, maxR, coloursDistribution, static)
         else:
             print("error_colours")
     else:

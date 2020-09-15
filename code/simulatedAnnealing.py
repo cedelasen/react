@@ -29,6 +29,7 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
     sDs = []
     temps = []
     its = []
+    acceptance = []
 
     bestSet = pSet #best set of points solution                                               
     bestSD = sD #best symmetric difference solution
@@ -66,6 +67,7 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
             newLocalSD = symmetricDifference.localSymDif(f, polygons, box)/box.area #new local sD
             if (newLocalSD < localSD): #if better solution
                 file.write("Energia local mejorada con nuevo punto : " + str(newPoint)+'\n')
+                acceptance.append(1)
             else: #else... worse solution, function acceptance
                 file.write("Energia local no mejorada con nuevo punto : " + str(newPoint)+'\n')
                 delta = newLocalSD - localSD
@@ -73,11 +75,13 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
                 rand = numpy.random.uniform(minRandom,maxRandom)
                 if(rand > prob):
                     file.write("Energia local no mejorada pero aceptada "+'\n')
+                    acceptance.append(1)
                 else:
                     file.write("Energia local no mejorada, tampoco aceptada "+'\n')
                     f.point = savePoint
                     pSet = dcel.points()
                     vor = Voronoi(pSet)
+                    acceptance.append(0)
                     
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
             if (sD < bestSD): #if best solution
@@ -96,4 +100,4 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, bestsDs, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its, acceptance

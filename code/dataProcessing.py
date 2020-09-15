@@ -17,8 +17,8 @@ import matplotlib.image as mpimg
 def process_args():
 
   args = easydict.EasyDict({
-          "relationship": "classic",
-          "method": "",
+          "relationship": "peers",
+          "method": "or",
           "colourDistribution": "",
           "static": True
   })

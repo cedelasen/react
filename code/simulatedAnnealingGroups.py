@@ -30,6 +30,7 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
     sDs = []
     temps = []
     its = []
+    acceptance = []
 
     bestSD = sD
     bestSet = None #best set of points solution
@@ -116,6 +117,7 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
 
             if size == numMejoras: #and                                           
                 file.write("----------------------------------------- ACEPTADO "+'\n')
+                acceptance.append(1)
             else:
                 file.write("----------------------------------------- DENEGADO "+'\n')
                 file.write("-------------------------------------------- Segunda oportunidad: "+'\n')
@@ -124,11 +126,13 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
                 rand = numpy.random.uniform(minRandom,maxRandom)
                 if(rand > prob):
                     file.write("-------------------------------------------- ACEPTADO "+'\n')
+                    acceptance.append(1)
                 else:
                     file.write("-------------------------------------------- DENEGADO "+'\n')
                     f.point = savePoint
                     pSet = dcel.points()
                     vor = Voronoi(pSet)
+                    acceptance.append(0)
             
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
             if (sD < bestSD): #if best solution
@@ -153,7 +157,7 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, bestsDs, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its, acceptance
 
 
 
@@ -174,6 +178,7 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     sDs = []
     temps = []
     its = []
+    acceptance = []
 
     bestSD = sD
     bestSet = pSet #best set of points solution
@@ -262,11 +267,13 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
 
             if numMejoras != 0: #or                                                
                 file.write("----------------------------------------- ACEPTADO "+'\n')
+                acceptance.append(1)
             else:
                 file.write("----------------------------------------- DENEGADO "+'\n')
                 f.point = savePoint
                 pSet = dcel.points()
                 vor = Voronoi(pSet)
+                acceptance.append(0)
 
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
             if (sD < bestSD):  #if best solution
@@ -291,7 +298,7 @@ def simulatedAnnealingGroups_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, bestsDs, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its, acceptance
 
 
 
@@ -312,6 +319,7 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
     sDs = []
     temps = []
     its = []
+    acceptance = []
 
     bestSD = sD
     bestSet = None #best set of points solution
@@ -399,9 +407,11 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
 
             if numMejoras > size/2:                                                
                 file.write("----------------------------------------- ACEPTADO "+'\n')
+                acceptance.append(1)
             elif numMejoras == size/2:
                 if newSDs[0] >= oldSDs[0]: #if selected face improves
                     file.write("----------------------------------------- ACEPTADO "+'\n')
+                    acceptance.append(1)
                 else:
                     file.write("----------------------------------------- DENEGADO "+'\n')
                     file.write("-------------------------------------------- Segunda oportunidad: "+'\n')
@@ -410,11 +420,13 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
                     rand = numpy.random.uniform(minRandom,maxRandom)
                     if(rand > prob):
                         file.write("-------------------------------------------- ACEPTADO "+'\n')
+                        acceptance.append(1)
                     else:
                         file.write("-------------------------------------------- DENEGADO "+'\n')
                         f.point = savePoint
                         pSet = dcel.points()
                         vor = Voronoi(pSet)
+                        acceptance.append(0)
             else:
                 file.write("----------------------------------------- DENEGADO "+'\n')
                 file.write("-------------------------------------------- Segunda oportunidad: "+'\n')
@@ -423,11 +435,13 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
                 rand = numpy.random.uniform(minRandom,maxRandom)
                 if(rand > prob):
                     file.write("-------------------------------------------- ACEPTADO "+'\n')
+                    acceptance.append(1)
                 else:
                     file.write("-------------------------------------------- DENEGADO "+'\n')
                     f.point = savePoint
                     pSet = dcel.points()
                     vor = Voronoi(pSet)
+                    acceptance.append(0)
 
 
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
@@ -453,4 +467,4 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, bestsDs, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its, acceptance

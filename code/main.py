@@ -30,8 +30,8 @@ def process_args():
           "maxExecs": 3,
           "minR": 0,
           "maxR": 1,
-          "relationship": "classic",
-          "method": "",
+          "relationship": "peers",
+          "method": "or",
           "colourDistribution": "",
           "static": True
   })

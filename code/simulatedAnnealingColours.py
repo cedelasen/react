@@ -31,6 +31,7 @@ def simulatedAnnealingColours_AndMethod(dcel, ratio, tInicial, tFinal, l, n, min
     sDs = []
     temps = []
     its = []
+    acceptance = []
 
     bestSD = sD
     bestSet = pSet #best set of points solution
@@ -72,17 +73,20 @@ def simulatedAnnealingColours_AndMethod(dcel, ratio, tInicial, tFinal, l, n, min
             
             if comp: #and chain
                 file.write("Energia local mejorada con nuevo punto : " + str(newPoint)+'\n')
+                acceptance.append(1)
             else:
                 delta = newSD - oldSD
                 prob = math.e**(-delta/t)
                 rand = numpy.random.uniform(minRandom, maxRandom)
                 if(rand > prob):
                     file.write("Energia local no mejorada pero aceptada "+'\n')
+                    acceptance.append(1)
                 else:
                     file.write("Energia local no mejorada, tampoco aceptada "+'\n')
                     f.point = savePoint
                     pSet = dcel.points()
                     vor = Voronoi(pSet)
+                    acceptance.append(0)
                     
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
             if (sD < bestSD): #if best solution
@@ -105,7 +109,7 @@ def simulatedAnnealingColours_AndMethod(dcel, ratio, tInicial, tFinal, l, n, min
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, bestsDs, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its, acceptance
 
 
 
@@ -127,6 +131,7 @@ def simulatedAnnealingColours_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minR
     sDs = []
     temps = []
     its = []
+    acceptance = []
 
     bestSD = sD
     bestSet = pSet #best set of points solution
@@ -166,11 +171,13 @@ def simulatedAnnealingColours_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minR
             
             if comp: #or chain
                 file.write("Energia local mejorada con nuevo punto : " + str(newPoint)+'\n')
+                acceptance.append(1)
             else:
                 file.write("Energia local no mejorada, tampoco aceptada "+'\n')
                 f.point = savePoint
                 pSet = dcel.points()
                 vor = Voronoi(pSet)
+                acceptance.append(0)
                 
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
             if (sD < bestSD): #if best solution
@@ -193,7 +200,7 @@ def simulatedAnnealingColours_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minR
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, bestsDs, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its, acceptance
 
 
 
@@ -215,6 +222,7 @@ def simulatedAnnealingColours_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n,
     sDs = []
     temps = []
     its = []
+    acceptance = []
 
     bestSD = sD
     bestSet = pSet #best set of points solution
@@ -260,31 +268,37 @@ def simulatedAnnealingColours_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n,
             
             if better >= worse: 
                 file.write("Energia local mejorada con nuevo punto : " + str(newPoint)+'\n')
+                acceptance.append(1)
             elif better == worse:
                 if (newLocalSD <= oldLocalSD):
                     file.write("Energia local mejorada en el caso 1 con nuevo punto : " + str(newPoint)+'\n')
+                    acceptance.append(1)
                 else:
                     delta = newSD - oldSD
                     prob = math.e**(-delta/t)
                     rand = numpy.random.uniform(minRandom, maxRandom)
                     if(rand > prob):
                         file.write("Energia local no mejorada en el caso 1 pero aceptada "+'\n')
+                        acceptance.append(1)
                     else:
                         file.write("Energia local no mejorada en el caso 1, tampoco aceptada "+'\n')
                         f.point = savePoint
                         pSet = dcel.points()
                         vor = Voronoi(pSet)
+                        acceptance.append(0)
             else: #elif better > worse:
                 delta = newSD - oldSD
                 prob = math.e**(-delta/t)
                 rand = numpy.random.uniform(minRandom, maxRandom)
                 if(rand > prob):
                     file.write("Energia local no mejorada pero aceptada "+'\n')
+                    acceptance.append(1)
                 else:
                     file.write("Energia local no mejorada, tampoco aceptada "+'\n')
                     f.point = savePoint
                     pSet = dcel.points()
                     vor = Voronoi(pSet)
+                    acceptance.append(0)
                 
             polygons = finiteVoronoi.vorFinitePolygonsList(vor)    
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
@@ -307,6 +321,6 @@ def simulatedAnnealingColours_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n,
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, bestsDs, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its, acceptance
 
  

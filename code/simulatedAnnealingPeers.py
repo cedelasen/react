@@ -30,6 +30,7 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     sDs = []
     temps = []
     its = []
+    acceptance = []
 
     bestSD = sD
     bestSet = pSet #best set of points solution
@@ -72,17 +73,20 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
             
             if( (newLocalSD_peer1<=localSD_peer1) and (newLocalSD_peer2<=localSD_peer2)): #and chain
                 file.write("Energia local mejorada con nuevo punto : " + str(newPoint)+'\n')
+                acceptance.append(1)
             else:
                 delta = (newLocalSD_peer1+newLocalSD_peer2)-(localSD_peer1+localSD_peer2)
                 prob = math.e**(-delta/t)
                 rand = numpy.random.uniform(minRandom,maxRandom)
                 if(rand > prob):
                     file.write("Energia local no mejorada pero aceptada "+'\n')
+                    acceptance.append(1)
                 else:
                     file.write("Energia local no mejorada, tampoco aceptada "+'\n')
                     f.point = savePoint
                     pSet = dcel.points()
                     vor = Voronoi(pSet)
+                    acceptance.append(0)
                     
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
             if (sD < bestSD): #if best solution
@@ -101,7 +105,7 @@ def simulatedAnnealingPeers_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minRa
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, bestsDs, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its, acceptance
 
 
 
@@ -123,6 +127,7 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
     sDs = []
     temps = []
     its = []
+    acceptance = []
 
     bestSD = sD
     bestSet = pSet #best set of points solution
@@ -165,17 +170,13 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
             
             if( (newLocalSD_peer1<=localSD_peer1) or (newLocalSD_peer2<=localSD_peer2)): #and chain
                 file.write("Energia local mejorada con nuevo punto : " + str(newPoint)+'\n')
+                acceptance.append(1)
             else:
-                delta = (newLocalSD_peer1+newLocalSD_peer2)-(localSD_peer1+localSD_peer2)
-                prob = math.e**(-delta/t)
-                rand = numpy.random.uniform(minRandom,maxRandom)
-                if(rand > prob):
-                    file.write("Energia local no mejorada pero aceptada "+'\n')
-                else:
-                    file.write("Energia local no mejorada, tampoco aceptada "+'\n')
-                    f.point = savePoint
-                    pSet = dcel.points()
-                    vor = Voronoi(pSet)
+                file.write("Energia local no mejorada, tampoco aceptada "+'\n')
+                f.point = savePoint
+                pSet = dcel.points()
+                vor = Voronoi(pSet)
+                acceptance.append(0)
                     
             sD = symmetricDifference.symDif(dcel.faces, polygons, box)
             if (sD < bestSD): #if best solution
@@ -194,4 +195,4 @@ def simulatedAnnealingPeers_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minRan
     pSet = dcel.points()
     sD =  symmetricDifference.symDif(dcel.faces, polygons, box)
     
-    return bestSet, bestSD, bestsDs, sDs, temps, its
+    return bestSet, bestSD, bestsDs, sDs, temps, its, acceptance
