@@ -12,13 +12,19 @@ import pandas
 import os
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-
+import finiteVoronoi
+import plottingModule
+from scipy.spatial import (
+    Voronoi,
+    voronoi_plot_2d
+)
+import pickle
 
 def process_args():
 
   args = easydict.EasyDict({
-          "relationship": "peers",
-          "method": "or",
+          "relationship": "classic",
+          "method": "",
           "colourDistribution": "",
           "static": True
   })
@@ -81,22 +87,20 @@ def meanData(csvPath):
 
               #print("\t\t\t"+"-----------------------------------------------")
 
-            if cont == 0:
-              cont = 1
-
-            print("\t\t\tmean of results: " + str(accResults/cont) + " (sD)")
-            print("\t\t\tmean time: " + str(datetime.timedelta(seconds=accTime/cont)) + " (hh/mm/ss)")
-            print("\t\t\tmean acc/den: " + str(acc_p_acc/cont) + " (%) / " + str(acc_p_den/cont) + " (%)")
-            print("\t\t\tn: " + str(cont) )
-            res=[execPS_i,r_i,l_i,str(accResults/cont),str(datetime.timedelta(seconds=accTime/cont)),str(acc_p_acc/cont),str(acc_p_den/cont),str(cont)]
-            to_save.append(res)
-            #print(res)
+            if not cont == 0:
+              print("\t\t\tmean of results: " + str(accResults/cont) + " (sD)")
+              print("\t\t\tmean time: " + str(datetime.timedelta(seconds=accTime/cont)) + " (hh/mm/ss)")
+              print("\t\t\tmean acc/den: " + str(acc_p_acc/cont) + " (%) / " + str(acc_p_den/cont) + " (%)")
+              print("\t\t\tn: " + str(cont) )
+              res=[execPS_i,r_i,l_i,str(accResults/cont),str(datetime.timedelta(seconds=accTime/cont)),str(acc_p_acc/cont),str(acc_p_den/cont),str(cont)]
+              to_save.append(res)
+              #print(res)
 
     if os.path.exists(csvPath+'result_resume.csv'):
       os.remove(csvPath+'result_resume.csv')
 
     with open(csvPath+'result_resume.csv','a') as f:
-          fnames = ['PS','r','l','result','time','n']
+          fnames = ['PS','r','l','result','time','p_acc','p_den','n']
           writer = csv.DictWriter(f, fieldnames=fnames)
           writer.writeheader() #new file
           for res in to_save:
@@ -106,18 +110,28 @@ def meanData(csvPath):
               'l':res[2],
               'result':res[3],
               'time':res[4],
-              'n':res[5]
+              'p_acc':res[5],
+              'p_den':res[6],
+              'n':res[7]
             })
 
 
-def stochasticProcess(csvFiles, imgFiles):
+def stochasticProcess(csvFiles, csvResultPath, jsonFiles):
 
-    for (file, img) in zip( sorted(csvFiles),sorted(imgFiles) ):
+    #dcel
+    if os.path.exists("out/dcel_pS"):
+      with open("out/dcel_pS", "rb") as read_file:
+        dcel = pickle.load(read_file)
+      read_file.close()  
+
+    for (file, json_f) in zip( sorted(csvFiles),sorted(jsonFiles) ):
       cont=0
       its = []
       sDs = []
-      bestsDs = [] 
-      img_to_show = mpimg.imread(img)
+      bestsDs = []
+      title = ""
+
+      #csv
       with open(file) as read_file:
         reader = csv.DictReader(read_file)
         for row in reader:
@@ -125,15 +139,63 @@ def stochasticProcess(csvFiles, imgFiles):
           bestsDs.append(float(row['bestsd']))
           its.append(cont)
           cont+=1
-      fig, (ax1, ax2) = plt.subplots(1, 2,figsize=(14,5))
-      fig.suptitle("symmetric difference: " + str(bestsDs[-1]))
-      ax2.set_axis_off()
-      ax1.plot(its,sDs, 'b')
-      ax1.plot(its,bestsDs, 'r')
-      ax2.imshow(img_to_show)
-      ax1.set_title('stochastic process')
-      ax1.set(xlabel='iteration', ylabel='symmetric difference')
-      ax2.set_title('voronoi calculated (green) and original partition (black)')
+      read_file.close()
+
+      #csv result
+      with open(csvResultPath) as read_file:
+        reader = csv.DictReader(read_file)
+        for row in reader:
+          if row['result'] == str(bestsDs[-1]):
+
+            title = title + row['relationship']
+
+            if row['method'] != "":
+              title = title + ", " + row['method']
+
+            if row['colourDistribution'] != "":
+              title = title + ", " + row['colourDistribution'] + ", " + row['static']
+
+            #title = title + "\n"
+
+            title = title + ", " + "l:" + row['l']
+            title = title + ", " + "r:" + row['r']
+            title = title + ", " + "execsPS:" + row['maxExecsPS']
+            title = title + ", " + "acc: " + str(round(float(row['p_acc']),4)) + "%"
+            title = title + ", " + "den: " + str(round(float(row['p_den']),4)) + "%"
+            title = title + ", " + "time: " + str(datetime.timedelta(seconds=float(row['time'])))
+
+            #title = title + "\n"
+
+            title = title + ", " + "sd:" + row['result']             
+
+            break
+
+      read_file.close()
+
+      #json
+      with open(json_f) as read_file:
+        p_set = json.load(read_file)
+      read_file.close()
+      #processing data json
+      vor = Voronoi(p_set)
+      polygons = finiteVoronoi.vorFiniteDelPolygonsList(vor, dcel.box)
+
+      #plot
+      with plt.rc_context(rc={'figure.max_open_warning': 0}):
+        fig, (ax1, ax2) = plt.subplots(1, 2,figsize=(14,5))
+        fig.suptitle(title)
+
+        ax1.plot(its,sDs, 'b')
+        ax1.plot(its,bestsDs, 'r')
+        ax1.set_title('stochastic process')
+        ax1.set(xlabel='iteration', ylabel='symmetric difference')
+
+        #ax2.set_axis_off()
+        ax2.plot()
+        plottingModule.plotDcel(dcel, 'k')
+        plottingModule.plotPolys(polygons,'g')
+        plottingModule.plotPoints(p_set,'-ob')
+        ax2.set_title("symmetric difference: " + str(bestsDs[-1]))
 
 
 def resumeResults():
@@ -153,9 +215,10 @@ def resumeResults():
 
     #paths to load results
     csvPath = "out/csv/" + path
-    imgPath = "out/results/" + path
+    csvResultPath = "out/csv/" + path + "result.csv"
+    jsonPath = "out/json/" + path
     csvFiles = glob.glob(csvPath+"0*.csv")
-    imgFiles = glob.glob(imgPath+"0*.jpg")
+    jsonFiles = glob.glob(jsonPath+"0*.json")
 
     meanData(csvPath)
-    stochasticProcess(csvFiles,imgFiles)
+    stochasticProcess(csvFiles,csvResultPath,jsonFiles)
