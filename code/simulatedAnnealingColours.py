@@ -68,7 +68,7 @@ def simulatedAnnealingColours_AndMethod(dcel, ratio, tInicial, tFinal, l, n, min
             vor = Voronoi(pSet) #recalculate voronoi
             newPolygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
             newSD = symmetricDifference.symDifColours(dcel.faces, newPolygons, color, box)
-            
+
             comp = symmetricDifference.andChainColours(dcel.faces, oldPolygons, newPolygons, color, box)
             
             if comp: #and chain
@@ -88,11 +88,11 @@ def simulatedAnnealingColours_AndMethod(dcel, ratio, tInicial, tFinal, l, n, min
                     vor = Voronoi(pSet)
                     acceptance.append(0)
                     
-            sD = symmetricDifference.symDif(dcel.faces, polygons, box)
+            sD = symmetricDifference.symDif(dcel.faces, newPolygons, box)
             if (sD < bestSD): #if best solution
                 bestSD = sD #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
-            
+
             bestsDs.append(bestSD)
             sDs.append(sD)
             temps.append(t)
@@ -179,7 +179,7 @@ def simulatedAnnealingColours_OrMethod(dcel, ratio, tInicial, tFinal, l, n, minR
                 vor = Voronoi(pSet)
                 acceptance.append(0)
                 
-            sD = symmetricDifference.symDif(dcel.faces, polygons, box)
+            sD = symmetricDifference.symDif(dcel.faces, newPolygons, box)
             if (sD < bestSD): #if best solution
                 bestSD = sD #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
@@ -300,8 +300,7 @@ def simulatedAnnealingColours_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n,
                     vor = Voronoi(pSet)
                     acceptance.append(0)
                 
-            polygons = finiteVoronoi.vorFinitePolygonsList(vor)    
-            sD = symmetricDifference.symDif(dcel.faces, polygons, box)
+            sD = symmetricDifference.symDif(dcel.faces, newPolygons, box)
             if (sD < bestSD): #if best solution
                 bestSD = sD #best symmetric difference <- actual symmetric difference
                 bestSet = pSet #best set of generator points <- actual set of generator points
