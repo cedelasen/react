@@ -96,7 +96,7 @@ def execute(dcel_i, polygons_i, l, r, maxExecs, minR, maxR, relationship, method
     plottingModule.plotPolys(polygonsPBest,'g')
     plottingModule.plotPoints(bestPSet,'-ob')
     
-    plottingModule.plt.savefig(path + repr(bestSD) + '.jpg')
+    #plottingModule.plt.savefig(path + repr(bestSD) + '.jpg')
     
     return bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance
     
