@@ -55,7 +55,8 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
         for i in range (0,it):
             f = dcel.faces[random.randint(0,n-1)] #select random face
             polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
-            localSD = symmetricDifference.localSymDif(f, polygons, box)/box.area #local sD
+            oldSD = symmetricDifference.symDif(dcel.faces, polygons, box)
+            #localSD = symmetricDifference.localSymDif(f, polygons, box)/box.area #local sD
             file.write("------ Subiteracion num: " + str(i)+'\n')
             newPoint = toolsModule.disturbPoint(f.point, f.polygon) #calculate new point
             file.write("------------ newPoint: " + str(newPoint)+'\n')
@@ -64,13 +65,16 @@ def simulatedAnnealing(dcel, ratio, tInicial, tFinal, l, n, minRandom, maxRandom
             pSet = dcel.points() #rescue all points with new point
             vor = Voronoi(pSet) #recalculate voronoi
             polygons = finiteVoronoi.vorFinitePolygonsList(vor) #not delimited
-            newLocalSD = symmetricDifference.localSymDif(f, polygons, box)/box.area #new local sD
-            if (newLocalSD < localSD): #if better solution
+            newSD = symmetricDifference.symDif(dcel.faces, polygons, box)
+            #newLocalSD = symmetricDifference.localSymDif(f, polygons, box)/box.area #new local sD
+            if (newSD < oldSD):
+            #if (newLocalSD < localSD): #if better solution
                 file.write("Energia local mejorada con nuevo punto : " + str(newPoint)+'\n')
                 acceptance.append(1)
             else: #else... worse solution, function acceptance
                 file.write("Energia local no mejorada con nuevo punto : " + str(newPoint)+'\n')
-                delta = newLocalSD - localSD
+                delta = newSD - oldSD
+                #delta = newLocalSD - localSD
                 prob = math.e**(-delta/t)
                 rand = numpy.random.uniform(minRandom,maxRandom)
                 if(rand > prob):
