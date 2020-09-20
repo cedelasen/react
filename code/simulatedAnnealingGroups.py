@@ -33,7 +33,7 @@ def simulatedAnnealingGroups_AndMethod(dcel, ratio, tInicial, tFinal, l, n, minR
     acceptance = []
 
     bestSD = sD
-    bestSet = None #best set of points solution
+    bestSet = pSet #best set of points solution
      
     cont = 0
     t = tInicial #|negative|
@@ -322,7 +322,7 @@ def simulatedAnnealingGroups_NumbersMethod(dcel, ratio, tInicial, tFinal, l, n, 
     acceptance = []
 
     bestSD = sD
-    bestSet = None #best set of points solution
+    bestSet = pSet #best set of points solution
      
     cont = 0
     t = tInicial #|negative|
