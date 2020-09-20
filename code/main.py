@@ -24,14 +24,14 @@ import pickle
 def process_args():
 
   args = easydict.EasyDict({
-          "i": 25,
+          "i": 10,
           "l": 0.06,
           "r": 0.095,
-          "maxExecs": 3,
+          "maxExecs": 5,
           "minR": 0,
           "maxR": 1,
-          "relationship": "peers",
-          "method": "or",
+          "relationship": "groups",
+          "method": "numbers",
           "colourDistribution": "",
           "static": True
   })
@@ -39,7 +39,7 @@ def process_args():
   return args
 
 
-def pre_execute(maxExecs, relationship):
+def pre_execute(maxExecs, relationship, coloursDistribution):
 
     #ORIGINAL PARTITION to DCEL INSTANCE
     dcel = dcelInstance.dcelInstanceByVerticesEdges(data.vL, data.eL, data.iniX_palop, data.finX_palop, data.iniY_palop, data.finY_palop, data.finX_palop, data.finY_palop)
@@ -101,15 +101,23 @@ def pre_execute(maxExecs, relationship):
         plottingModule.plotPoints(pSetPlantingSeedsFin, '-ob')
         for f in dcel.faces:
             plottingModule.plt.plot(f.point[0], f.point[1], f.color)
-
+        #save points 
     #save points 
-    with open("out/dcel_pS", "wb") as write_file:
-      pickle.dump(dcel, write_file)
-    write_file.close()
-
-    with open("out/polygons_pS", "wb") as write_file:
-      pickle.dump(polygons, write_file)
-    write_file.close()
+        #save points 
+        with open("out/dcel_pS_c", "wb") as write_file: #colored
+          pickle.dump(dcel, write_file)
+        write_file.close()
+        with open("out/polygons_pS_c", "wb") as write_file:
+          pickle.dump(polygons, write_file)
+        write_file.close()
+    else:
+        #save points 
+        with open("out/dcel_pS", "wb") as write_file: #not colored
+          pickle.dump(dcel, write_file)
+        write_file.close()
+        with open("out/polygons_pS", "wb") as write_file:
+          pickle.dump(polygons, write_file)
+        write_file.close()
 
     return dcel, polygons
 
@@ -127,20 +135,32 @@ def execute(args):
   csvPath = "out/csv/" + path
   jsonPath = "out/json/" + path
       
-  if os.path.exists("out/dcel_pS") and os.path.exists("out/polygons_pS"):
-    with open("out/dcel_pS", "rb") as read_file:
-      dcel = pickle.load(read_file)
-    read_file.close()
-    with open("out/polygons_pS", "rb") as read_file:
-      polygons = pickle.load(read_file)
-    read_file.close()
-  else:
-    dcel, polygons = pre_execute(args.maxExecs, args.relationship)
-
   for i in range(args.i):
-      
+                  
+      if (args.relationship == "colours"):
+        if os.path.exists("out/dcel_pS_c") and os.path.exists("out/polygons_pS_c"):
+          with open("out/dcel_pS_c", "rb") as read_file:
+            dcel = pickle.load(read_file)
+          read_file.close()
+          with open("out/polygons_pS_c", "rb") as read_file:
+            polygons = pickle.load(read_file)
+          read_file.close()
+        else:
+          dcel, polygons = pre_execute(args.maxExecs, args.relationship, args.colourDistribution)
+      else:
+        if os.path.exists("out/dcel_pS") and os.path.exists("out/polygons_pS"):
+          with open("out/dcel_pS", "rb") as read_file:
+            dcel = pickle.load(read_file)
+          read_file.close()
+          with open("out/polygons_pS", "rb") as read_file:
+            polygons = pickle.load(read_file)
+          read_file.close()
+        else:
+          dcel, polygons = pre_execute(args.maxExecs, args.relationship, args.colourDistribution)
+
+
       start = time.time()
-            
+
       bestPSet, bestSD, bestsDs, sDs, temps, its, acceptance = execution.execute(dcel, polygons, args.l, args.r, args.maxExecs, args.minR, args.maxR, args.relationship, args.method, args.colourDistribution, args.static, imagePath, i)
     
       end = time.time()
