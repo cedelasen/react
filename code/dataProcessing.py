@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import finiteVoronoi
 import plottingModule
+import math
 from scipy.spatial import (
     Voronoi,
     voronoi_plot_2d
@@ -31,6 +32,15 @@ def process_args():
   
   return args
 
+def standardDeviation(results, mean):
+
+  acc = 0
+  n = len(results)
+
+  for res in results:
+    acc = acc + (res-mean)**2
+
+  return math.sqrt(acc/n)
 
 def meanData(csvPath):
 
@@ -54,6 +64,7 @@ def meanData(csvPath):
             reader = csv.DictReader(read_file)
 
             accResults = 0
+            results = []
             accTime = 0
             acc_p_acc = 0
             acc_p_den = 0
@@ -80,6 +91,7 @@ def meanData(csvPath):
               if check_execs and check_r and check_l:
                 #print("\t\t\t\t IN")
                 accResults+=result
+                results.append(result)
                 accTime+=time
                 acc_p_acc+=p_acc
                 acc_p_den+=p_den
@@ -88,11 +100,18 @@ def meanData(csvPath):
               #print("\t\t\t"+"-----------------------------------------------")
 
             if not cont == 0:
-              print("\t\t\tmean of results: " + str(accResults/cont) + " (sD)")
-              print("\t\t\tmean time: " + str(datetime.timedelta(seconds=accTime/cont)) + " (hh/mm/ss)")
-              print("\t\t\tmean acc/den: " + str(acc_p_acc/cont) + " (%) / " + str(acc_p_den/cont) + " (%)")
-              print("\t\t\tn: " + str(cont) )
-              res=[execPS_i,r_i,l_i,str(accResults/cont),str(datetime.timedelta(seconds=accTime/cont)),str(acc_p_acc/cont),str(acc_p_den/cont),str(cont)]
+              mean = str(round(accResults/cont, 6))
+              sDev = str(round(standardDeviation(results, accResults/cont), 6))
+              mean_time = str(datetime.timedelta(seconds=accTime/cont))
+              acc = str(round(acc_p_acc/cont, 3))
+              den = str(round(acc_p_den/cont, 3))
+              n = str(cont)
+              print("\t\t\tmean of results: " + mean + " (sD)")
+              print("\t\t\tstandard deviation: " + sDev )
+              print("\t\t\tmean time: " + mean_time + " (hh/mm/ss)")
+              print("\t\t\tmean acc/den: " + acc + " (%) / " + den + " (%)")
+              print("\t\t\tn: " + n )
+              res=[execPS_i,r_i,l_i,mean,sDev,mean_time,acc,den,n]
               to_save.append(res)
               #print(res)
 
@@ -100,7 +119,7 @@ def meanData(csvPath):
       os.remove(csvPath+'result_resume.csv')
 
     with open(csvPath+'result_resume.csv','a') as f:
-          fnames = ['PS','r','l','result','time','p_acc','p_den','n']
+          fnames = ['PS','r','l','result','sDev','time','acc','den','n']
           writer = csv.DictWriter(f, fieldnames=fnames)
           writer.writeheader() #new file
           for res in to_save:
@@ -109,10 +128,11 @@ def meanData(csvPath):
               'r':res[1],
               'l':res[2],
               'result':res[3],
-              'time':res[4],
-              'p_acc':res[5],
-              'p_den':res[6],
-              'n':res[7]
+              'sDev':res[4],
+              'time':res[5],
+              'acc':res[6],
+              'den':res[7],
+              'n':res[8]
             })
 
 
