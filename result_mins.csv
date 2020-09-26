@@ -1,0 +1,13 @@
+relationship,method,colourDist,static,PS,r,l,result,acc,den
+classic,-,-,True,5,0.95,0.06,0.032773,0.128,0.872
+groups,numbers,-,True,5,0.095,0.03,0.0369225,0.175,0.825
+peers,and,-,True,5,0.95,0.06,0.039021,0.089,0.910
+colours,and,random2colours,True,5,0.15,0.03,0.0438077,0.042,0.958
+colours,and,4rectangles,True,5,0.95,0.06,0.0489913,0.030,0.970
+peers,or,-,True,5,0.95,0.06,0.049738,0.457,0.543
+groups,and,-,True,5,0.95,0.06,0.0550390,0.036,0.964
+colours,or,4rectangles,True,5,0.095,0.06,0.063513,1.0,0.0
+groups,or,-,True,5,0.15,0.06,0.0641085,0.908,0.092
+colours,numbers,random2colours,True,5,0.095,0.03,0.064227,0.993,0.007
+colours,or,random2colours,True,5,0.15,0.06,0.064593,1.0,0.0
+colours,numbers,4rectangles,True,5,0.095,0.06,0.064811,0.993,0.007
